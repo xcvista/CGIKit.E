@@ -25,7 +25,7 @@
         NSString *root = CGISTR(@".%@", path);
         
         NSMutableString *content = [NSMutableString stringWithFormat:@"<!DOCTYPE html>\n\n<html>\n<head>\n<meta charset=\"utf-8\" />\n<title>%@</title>\n</head>\n<body>\n<ul>\n", path];
-        NSArray *paths = [fm contentsOfDirectoryAtPath:root error:NULL];
+        NSArray *paths = [[fm contentsOfDirectoryAtPath:root error:NULL] sortedArrayUsingSelector:@selector(localizedCompare:)];
         
         if (![path isEqualToString:@"/"])
         {
