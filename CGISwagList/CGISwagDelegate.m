@@ -44,7 +44,7 @@
                 }
                 else if ([@[@"jpg", @"png", @"gif"] containsObject:[file pathExtension]])
                 {
-                    [content appendFormat:@"<li><a href=\"%@\"><img src=\"%@\" style=\"max-height: 200px; max-width: 200px;\" /></a></li>\n", [target substringFromIndex:1], [target substringFromIndex:1]];
+                    [content appendFormat:@"<li><a href=\"%@\"><img src=\"%@\" style=\"max-height: 200px; max-width: 200px;\" alt=\"%@\" /></a></li>\n", [target substringFromIndex:1], [target substringFromIndex:1], file];
                 }
                 else
                 {
