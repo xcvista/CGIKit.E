@@ -7,7 +7,7 @@ CGIKit_OBJC_FILES := NSObject+CGISafeInvoke.m CGIApplication.m
 CGIKit_VERSION := 5.0
 CGIKit_CURRENT_VERSION_NAME := E
 CGIKit_CFLAGS := -fPIC -pedantic -fblocks
-CGIKit_OBJCFLAGS := -fobjc-arc -Xclang -fobjc-default-synthesized-properties
+CGIKit_OBJCFLAGS := -fobjc-runtime=gnustep-1.7 -fobjc-nonfragile-abi -fobjc-arc -Xclang -fobjc-default-synthesize-properties
 
 -include GNUmakefile.preamble
 
