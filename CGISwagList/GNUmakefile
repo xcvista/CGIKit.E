@@ -2,12 +2,12 @@ include $(GNUSTEP_MAKEFILES)/common.make
 
 TOOL_NAME := CGISwag
 
-CGIHello_OBJC_FILES := CGISwagDelegate.m
-CGIHello_C_FILES := main.c
-CGIHello_VERSION := 5.0
-CGIHello_CFLAGS := -fPIC -pedantic -fblocks
-CGIHello_OBJCFLAGS := -fobjc-runtime=gnustep-1.7 -fobjc-nonfragile-abi -fobjc-arc -Xclang -fobjc-default-synthesize-properties
-CGIHello_LDFLAGS := -lCGIKit
+CGISwag_OBJC_FILES := CGISwagDelegate.m
+CGISwag_C_FILES := main.c
+CGISwag_VERSION := 5.0
+CGISwag_CFLAGS := -fPIC -pedantic -fblocks
+CGISwag_OBJCFLAGS := -fobjc-runtime=gnustep-1.7 -fobjc-nonfragile-abi -fobjc-arc -Xclang -fobjc-default-synthesize-properties
+CGISwag_LDFLAGS := -lCGIKit
 
 -include GNUmakefile.preamble
 
