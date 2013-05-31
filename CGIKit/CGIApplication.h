@@ -1,0 +1,52 @@
+//
+//  CGIApplication.h
+//  CGIKit.E
+//
+//  Created by Maxthon Chan on 13-6-1.
+//
+//
+
+#ifndef CGIKIT_CGIAPPLICATION_H
+#define CGIKIT_CGIAPPLICATION_H
+
+#include <CGIKit/CGICommon.h>
+
+CGIBeginDecls
+
+CGIClass CGIApplication;
+
+CGIExtern int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, const char *applicationClass) CGINoReturn;
+CGIExtern id CGIApp;
+
+CGIConstantString(CGIApplicationException, @"info.maxchan.cgikit.exception");
+
+CGIEndDecls
+
+#ifdef __OBJC__
+
+@protocol CGIApplicationDelegate <NSObject>
+
+@required
+- (NSData *)application:(CGIApplication *)application dataFromProcessingHTTPRequest:(NSDictionary *)request requestData:(NSData *)data withResponse:(NSDictionary **)response;
+
+@optional
+- (void)applicationDidStart:(CGIApplication *)application;
+- (void)application:(CGIApplication *)application didReceiveRequestData:(NSData *)data;
+- (void)application:(CGIApplication *)application willWriteResponseHeader:(NSDictionary *)response;
+- (void)application:(CGIApplication *)application willWriteResponseData:(NSData *)data;
+
+@end
+
+@interface CGIApplication : NSObject
+
+@property id<CGIApplicationDelegate> delegate;
+
++ (instancetype)application;
+
+- (void)run CGINoReturn;
+
+@end
+
+#endif
+
+#endif
