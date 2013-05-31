@@ -53,6 +53,8 @@
             }
         }
         
+        [content appendString:@"</li>\n</body>\n</html>\n"];
+        
         NSDictionary *resp = @{@"Content-Type": @"text/html"};
         *response = resp;
         return [content dataUsingEncoding:NSUTF8StringEncoding];
