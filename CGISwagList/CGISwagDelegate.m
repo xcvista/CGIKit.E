@@ -26,6 +26,12 @@
         
         NSMutableString *content = [NSMutableString stringWithFormat:@"<!DOCTYPE html>\n\n<html>\n<head>\n<meta charset=\"utf-8\" />\n<title>%@</title>\n</head>\n<body>\n<ul>\n", path];
         NSArray *paths = [fm contentsOfDirectoryAtPath:root error:NULL];
+        
+        if (![path isEqualToString:@"/"])
+        {
+            [content appendFormat:@"<li><a href=\"?%@\" />../</a></li>", [path stringByDeletingLastPathComponent]];
+        }
+        
         for (NSString *file in paths)
         {
             NSString *target = [root stringByAppendingPathComponent:file];
@@ -38,7 +44,7 @@
                 }
                 else if ([@[@"jpg", @"png", @"gif"] containsObject:[file pathExtension]])
                 {
-                    [content appendFormat:@"<li><a href=\"%@\"><img href=\"%@\" /></a></li>\n", [target substringFromIndex:1], target];
+                    [content appendFormat:@"<li><a href=\"%@\"><img src=\"%@\" style=\"max-height: 200px; max-width: 200px;\" /></a></li>\n", [target substringFromIndex:1], [target substringFromIndex:1]];
                 }
                 else
                 {
