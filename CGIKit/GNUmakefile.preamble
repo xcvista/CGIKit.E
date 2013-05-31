@@ -1,3 +1,2 @@
 
-ADDITIONAL_CFLAGS := -fPIC -pedantic -fblocks
-ADDITIONAL_OBJC_FLAGS := -fobjc-arc -Xclang -fobjc-default-synthesized-properties
+
