@@ -80,7 +80,7 @@
 
 #ifdef GNUSTEP
 
-#include <objc/objc_arc.h>          // GNUstep have a header file for this.
+#include <objc/objc-arc.h>          // GNUstep have a header file for this.
 
 #else
 
