@@ -10,6 +10,14 @@
 
 @implementation CGISwagDelegate
 
+static inline NSString *__CGISizeString(unsigned long long size)
+{
+    NSArray *units = @[@" bytes", @"KiB", @"MiB", @"GiB", @"TiB", @"YiB", @"ZiB"];
+    NSUInteger index = 0;
+    for (index = 0; size >= 1024; size /= 1024, index++);
+    return CGISTR(@"%llu%@", size, units[index]);
+}
+
 - (NSData *)application:(CGIApplication *)application dataFromProcessingHTTPRequest:(NSDictionary *)request requestData:(NSData *)data withResponse:(NSDictionary *__autoreleasing *)response
 {
     NSString *path = request[@"QUERY_STRING"];
@@ -38,17 +46,18 @@
             BOOL dir = NO;
             if ([fm fileExistsAtPath:target isDirectory:&dir])
             {
+                NSDictionary *stat = [fm attributesOfItemAtPath:target error:NULL];
                 if (dir)
                 {
                     [content appendFormat:@"<li><a href=\"?%@\">%@/</a></li>\n", [target substringFromIndex:1], file];
                 }
                 else if ([@[@"jpg", @"png", @"gif"] containsObject:[file pathExtension]])
                 {
-                    [content appendFormat:@"<li><a href=\"%@\"><img src=\"%@\" style=\"max-height: 200px; max-width: 200px;\" alt=\"%@\" /></a></li>\n", [target substringFromIndex:1], [target substringFromIndex:1], file];
+                    [content appendFormat:@"<li><a href=\"%@\"><img src=\"%@\" style=\"max-height: 200px; max-width: 200px;\" alt=\"%@\" /></a>(%@ [%@])</li>\n", [target substringFromIndex:1], [target substringFromIndex:1], file, file, __CGISizeString([stat fileSize])];
                 }
                 else
                 {
-                    [content appendFormat:@"<li><a href=\"%@\">%@</a></li>\n", [target substringFromIndex:1], file];
+                    [content appendFormat:@"<li><a href=\"%@\">%@</a> [%@]</li>\n", [target substringFromIndex:1], file, __CGISizeString([stat fileSize])];
                 }
             }
         }
