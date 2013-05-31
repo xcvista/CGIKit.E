@@ -14,3 +14,6 @@ CGIKit_OBJCFLAGS := -fobjc-runtime=gnustep-1.7 -fobjc-nonfragile-abi -fobjc-arc 
 include $(GNUSTEP_MAKEFILES)/framework.make
 
 -include GNUmakefile.postamble
+
+after-install::
+	ldconfig

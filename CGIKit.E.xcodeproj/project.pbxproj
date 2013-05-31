@@ -22,7 +22,6 @@
 		1D72DAD4175942D60020E96C /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72DAA0175923090020E96C /* CGIKit.framework */; };
 		1D72DAD7175944590020E96C /* CGITestApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAD6175944590020E96C /* CGITestApplicationDelegate.m */; };
 		1D72DADB175947F60020E96C /* GNUmakefile in Resources */ = {isa = PBXBuildFile; fileRef = 1D72DADA175947F60020E96C /* GNUmakefile */; };
-		1D72DADE175949A30020E96C /* GNUmakefile.preamble in Resources */ = {isa = PBXBuildFile; fileRef = 1D72DADD175949A30020E96C /* GNUmakefile.preamble */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,10 +60,8 @@
 		1D72DAD5175944590020E96C /* CGITestApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGITestApplicationDelegate.h; sourceTree = "<group>"; };
 		1D72DAD6175944590020E96C /* CGITestApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGITestApplicationDelegate.m; sourceTree = "<group>"; };
 		1D72DAD8175947430020E96C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		1D72DADA175947F60020E96C /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		1D72DADA175947F60020E96C /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; usesTabs = 1; };
 		1D72DADC1759494F0020E96C /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
-		1D72DADD175949A30020E96C /* GNUmakefile.preamble */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile.preamble; sourceTree = "<group>"; };
-		1D72DADF175949EF0020E96C /* GNUmakefile.preamble */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile.preamble; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +158,6 @@
 				1D72DAD6175944590020E96C /* CGITestApplicationDelegate.m */,
 				1D72DACF175942BB0020E96C /* CGITest.1 */,
 				1D72DADC1759494F0020E96C /* GNUmakefile */,
-				1D72DADF175949EF0020E96C /* GNUmakefile.preamble */,
 				1D72DACD175942BB0020E96C /* Supporting Files */,
 			);
 			path = CGITest;
@@ -179,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				1D72DADA175947F60020E96C /* GNUmakefile */,
-				1D72DADD175949A30020E96C /* GNUmakefile.preamble */,
 			);
 			name = Linux;
 			sourceTree = "<group>";
@@ -270,7 +265,6 @@
 			files = (
 				1D72DAAE175923090020E96C /* InfoPlist.strings in Resources */,
 				1D72DADB175947F60020E96C /* GNUmakefile in Resources */,
-				1D72DADE175949A30020E96C /* GNUmakefile.preamble in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
