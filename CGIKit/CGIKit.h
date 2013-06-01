@@ -14,6 +14,8 @@
 
 #ifdef __OBJC__
 
+#import <CGIKit/CGIFastApplication.h>
+
 #endif
 
 #endif

@@ -14,8 +14,6 @@
 		1D72DABB175925C90020E96C /* CGIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAB0175923090020E96C /* CGIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D72DABC175925C90020E96C /* CGICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAB6175923480020E96C /* CGICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D72DABE175931570020E96C /* CGICommon_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DABD175931570020E96C /* CGICommon_Private.h */; };
-		1D72DAC1175933A20020E96C /* NSObject+CGISafeInvoke.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DABF175933A20020E96C /* NSObject+CGISafeInvoke.h */; };
-		1D72DAC2175933A20020E96C /* NSObject+CGISafeInvoke.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAC0175933A20020E96C /* NSObject+CGISafeInvoke.m */; };
 		1D72DAC9175942BA0020E96C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72DAC8175942BA0020E96C /* Foundation.framework */; };
 		1D72DACC175942BB0020E96C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DACB175942BB0020E96C /* main.c */; };
 		1D72DAD0175942BB0020E96C /* CGITest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D72DACF175942BB0020E96C /* CGITest.1 */; };
@@ -27,6 +25,11 @@
 		1D72DAEC175951020020E96C /* CGISwagList.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D72DAEB175951020020E96C /* CGISwagList.1 */; };
 		1D72DAF0175951210020E96C /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72DAA0175923090020E96C /* CGIKit.framework */; };
 		1D72DAF3175951550020E96C /* CGISwagDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAF2175951550020E96C /* CGISwagDelegate.m */; };
+		1D72DAFB17597D500020E96C /* CGIFastApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAF917597D500020E96C /* CGIFastApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D72DAFC17597D500020E96C /* CGIFastApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAFA17597D500020E96C /* CGIFastApplication.m */; };
+		1D72DAFE175A234E0020E96C /* CGICommon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAFD175A234D0020E96C /* CGICommon.c */; };
+		1D72DB01175A23D10020E96C /* CGIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAFF175A23D00020E96C /* CGIHTTPRequest.h */; };
+		1D72DB02175A23D10020E96C /* CGIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DB00175A23D00020E96C /* CGIHTTPRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,8 +68,6 @@
 		1D72DAB71759259A0020E96C /* CGIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIApplication.h; sourceTree = "<group>"; };
 		1D72DAB81759259A0020E96C /* CGIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIApplication.m; sourceTree = "<group>"; };
 		1D72DABD175931570020E96C /* CGICommon_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICommon_Private.h; sourceTree = "<group>"; };
-		1D72DABF175933A20020E96C /* NSObject+CGISafeInvoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CGISafeInvoke.h"; sourceTree = "<group>"; };
-		1D72DAC0175933A20020E96C /* NSObject+CGISafeInvoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CGISafeInvoke.m"; sourceTree = "<group>"; };
 		1D72DAC7175942BA0020E96C /* CGITest.cgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CGITest.cgi; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D72DAC8175942BA0020E96C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D72DACB175942BB0020E96C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -84,6 +85,11 @@
 		1D72DAF1175951550020E96C /* CGISwagDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGISwagDelegate.h; sourceTree = "<group>"; };
 		1D72DAF2175951550020E96C /* CGISwagDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGISwagDelegate.m; sourceTree = "<group>"; };
 		1D72DAF41759523F0020E96C /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		1D72DAF917597D500020E96C /* CGIFastApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIFastApplication.h; sourceTree = "<group>"; };
+		1D72DAFA17597D500020E96C /* CGIFastApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIFastApplication.m; sourceTree = "<group>"; };
+		1D72DAFD175A234D0020E96C /* CGICommon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CGICommon.c; sourceTree = "<group>"; };
+		1D72DAFF175A23D00020E96C /* CGIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPRequest.h; sourceTree = "<group>"; };
+		1D72DB00175A23D00020E96C /* CGIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,11 +169,14 @@
 			children = (
 				1D72DAB0175923090020E96C /* CGIKit.h */,
 				1D72DAB6175923480020E96C /* CGICommon.h */,
+				1D72DAFD175A234D0020E96C /* CGICommon.c */,
 				1D72DABD175931570020E96C /* CGICommon_Private.h */,
-				1D72DABF175933A20020E96C /* NSObject+CGISafeInvoke.h */,
-				1D72DAC0175933A20020E96C /* NSObject+CGISafeInvoke.m */,
 				1D72DAB71759259A0020E96C /* CGIApplication.h */,
 				1D72DAB81759259A0020E96C /* CGIApplication.m */,
+				1D72DAF917597D500020E96C /* CGIFastApplication.h */,
+				1D72DAFA17597D500020E96C /* CGIFastApplication.m */,
+				1D72DAFF175A23D00020E96C /* CGIHTTPRequest.h */,
+				1D72DB00175A23D00020E96C /* CGIHTTPRequest.m */,
 				1D72DAD9175947E80020E96C /* Linux */,
 				1D72DAAA175923090020E96C /* Supporting Files */,
 			);
@@ -244,7 +253,8 @@
 				1D72DABB175925C90020E96C /* CGIKit.h in Headers */,
 				1D72DABC175925C90020E96C /* CGICommon.h in Headers */,
 				1D72DABE175931570020E96C /* CGICommon_Private.h in Headers */,
-				1D72DAC1175933A20020E96C /* NSObject+CGISafeInvoke.h in Headers */,
+				1D72DAFB17597D500020E96C /* CGIFastApplication.h in Headers */,
+				1D72DB01175A23D10020E96C /* CGIHTTPRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +319,9 @@
 		1D72DA95175922FD0020E96C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CGI;
 				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = muski;
 			};
 			buildConfigurationList = 1D72DA98175922FD0020E96C /* Build configuration list for PBXProject "CGIKit.E" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -348,7 +360,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D72DABA1759259A0020E96C /* CGIApplication.m in Sources */,
-				1D72DAC2175933A20020E96C /* NSObject+CGISafeInvoke.m in Sources */,
+				1D72DAFC17597D500020E96C /* CGIFastApplication.m in Sources */,
+				1D72DAFE175A234E0020E96C /* CGICommon.c in Sources */,
+				1D72DB02175A23D10020E96C /* CGIHTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +628,7 @@
 				1D72DAB5175923090020E96C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D72DAD1175942BB0020E96C /* Build configuration list for PBXNativeTarget "CGITest" */ = {
 			isa = XCConfigurationList;
@@ -622,6 +637,7 @@
 				1D72DAD3175942BB0020E96C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D72DAED175951020020E96C /* Build configuration list for PBXNativeTarget "CGISwagList" */ = {
 			isa = XCConfigurationList;
@@ -630,6 +646,7 @@
 				1D72DAEF175951020020E96C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

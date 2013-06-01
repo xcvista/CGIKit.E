@@ -8,7 +8,6 @@
 
 #import "CGIApplication.h"
 #import "CGICommon_Private.h"
-#import "NSObject+CGISafeInvoke.h"
 
 CGIConstantString(CGIApplicationException, @"info.maxchan.cgikit.exception");
 
@@ -53,31 +52,27 @@ int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, c
 
 - (void)run
 {
-    id delegate = self.delegate;
     NSProcessInfo *proc = [NSProcessInfo processInfo];
     NSDictionary *env = [proc environment];
     
-    [delegate safelyPerformSelector:@selector(applicationDidStart:), self];
+    [self applicationDidStart];
     
     NSFileHandle *_stdin = [NSFileHandle fileHandleWithStandardInput];
     
     NSInteger length = [env[@"CONTENT_LENGTH"] integerValue];
     
     NSData *requestData = (length) ? [_stdin readDataOfLength:length] : [NSData data];
-    [delegate safelyPerformSelector:@selector(application:didReceiveRequestData:), self, requestData];
+    [self applicationDidReceiveRequestData:requestData];
     
     NSDictionary *response = nil;
-    NSData *responseData = [delegate application:self
-                   dataFromProcessingHTTPRequest:env
-                                     requestData:requestData
-                                    withResponse:&response];
+    NSData *responseData = [self dataFromProcessingHTTPRequest:env requestData:requestData withResponse:&response];
     
     if (!response || !responseData)
     {
         [NSException raise:CGIApplicationException format:@"No response found."];
     }
     
-    [delegate safelyPerformSelector:@selector(application:willWriteResponseHeader:), self, response];
+    [self applicationWillWriteResponseHeader:response];
     for (NSString *key in response)
     {
         id value = response[key];
@@ -96,11 +91,56 @@ int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, c
     putchar('\n');
     fflush(stdout);
     
-    [delegate safelyPerformSelector:@selector(application:willWriteResponseData:), self, responseData];
+    [self applicationWillWriteResponseData:responseData];
     NSFileHandle *_stdout = [NSFileHandle fileHandleWithStandardOutput];
     [_stdout writeData:responseData];
     
     exit(0);
+}
+
+- (void)applicationDidStart
+{
+    if ([self.delegate respondsToSelector:@selector(applicationDidStart:)])
+        [self.delegate applicationDidStart:self];
+}
+
+- (void)applicationDidReceiveRequestData:(NSData *)data
+{
+    if ([self.delegate respondsToSelector:@selector(application:didReceiveRequestData:)])
+        [self.delegate application:self didReceiveRequestData:data];
+}
+
+- (void)applicationWillWriteResponseData:(NSData *)data
+{
+    if ([self.delegate respondsToSelector:@selector(application:willWriteResponseData:)])
+        [self.delegate application:self willWriteResponseData:data];
+}
+
+- (void)applicationWillWriteResponseHeader:(NSDictionary *)response
+{
+    if ([self.delegate respondsToSelector:@selector(application:willWriteResponseHeader:)])
+        [self.delegate application:self willWriteResponseHeader:response];
+}
+
+- (NSData *)dataFromProcessingHTTPRequest:(NSDictionary *)request requestData:(NSData *)data withResponse:(NSDictionary *__autoreleasing *)response
+{
+    if ([self.delegate respondsToSelector:@selector(application:dataFromProcessingHTTPRequest:requestData:withResponse:)])
+    {
+        return [self.delegate application:self
+            dataFromProcessingHTTPRequest:request
+                              requestData:data
+                             withResponse:response];
+    }
+    else
+    {
+        CGIHTTPRequest *request = nil;
+        CGIHTTPResponse *response = [self responseFromProcessingRequest:request];
+    }
+}
+
+- (CGIHTTPResponse *)responseFromProcessingRequest:(CGIHTTPRequest *)request
+{
+    
 }
 
 @end

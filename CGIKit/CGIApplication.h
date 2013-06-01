@@ -24,18 +24,29 @@ CGIEndDecls
 
 #ifdef __OBJC__
 
+@class CGIHTTPRequest, CGIHTTPResponse;
+
 @protocol CGIApplicationDelegate <NSObject>
 
-@required
-- (NSData *)application:(CGIApplication *)application dataFromProcessingHTTPRequest:(NSDictionary *)request requestData:(NSData *)data withResponse:(NSDictionary **)response;
-
 @optional
+- (NSData *)application:(CGIApplication *)application dataFromProcessingHTTPRequest:(NSDictionary *)request requestData:(NSData *)data withResponse:(NSDictionary **)response;
+- (CGIHTTPResponse *)application:(CGIApplication *)application responseFromProcessingRequest:(CGIHTTPRequest *)request;
+
 - (void)applicationDidStart:(CGIApplication *)application;
 - (void)application:(CGIApplication *)application didReceiveRequestData:(NSData *)data;
 - (void)application:(CGIApplication *)application willWriteResponseHeader:(NSDictionary *)response;
 - (void)application:(CGIApplication *)application willWriteResponseData:(NSData *)data;
 
 @end
+
+/* 
+ * ====================================
+ * CGIApplication
+ * ------------------------------------
+ * One-off classical CGI application.
+ * Good for small web utilities.
+ * ====================================
+ */
 
 @interface CGIApplication : NSObject
 
@@ -44,6 +55,13 @@ CGIEndDecls
 + (instancetype)application;
 
 - (void)run CGINoReturn;
+
+- (NSData *)dataFromProcessingHTTPRequest:(NSDictionary *)request requestData:(NSData *)data withResponse:(NSDictionary **)response;
+- (CGIHTTPResponse *)responseFromProcessingRequest:(CGIHTTPRequest *)request;
+- (void)applicationDidStart;
+- (void)applicationDidReceiveRequestData:(NSData *)data;
+- (void)applicationWillWriteResponseHeader:(NSDictionary *)response;
+- (void)applicationWillWriteResponseData:(NSData *)data;
 
 @end
 
