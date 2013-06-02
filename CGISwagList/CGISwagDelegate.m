@@ -20,7 +20,7 @@ static inline NSString *__CGISizeString(unsigned long long size)
 
 - (NSData *)application:(CGIApplication *)application dataFromProcessingHTTPRequest:(NSDictionary *)request requestData:(NSData *)data withResponse:(NSDictionary *__autoreleasing *)response
 {
-    NSString *path = request[@"QUERY_STRING"];
+    NSString *path = [request[@"QUERY_STRING"] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     if (![path length])
     {
         NSDictionary *resp = @{@"Status": @"301", @"Location": @"?/"};
@@ -32,7 +32,7 @@ static inline NSString *__CGISizeString(unsigned long long size)
         NSFileManager *fm = [NSFileManager defaultManager];
         NSString *root = CGISTR(@".%@", path);
         
-        NSMutableString *content = [NSMutableString stringWithFormat:@"<!DOCTYPE html>\n\n<html>\n<head>\n<meta charset=\"utf-8\" />\n<title>%@</title>\n</head>\n<body>\n<ul>\n", path];
+        NSMutableString *content = [NSMutableString stringWithFormat:@"<!DOCTYPE html>\n\n<html>\n<head>\n<meta charset=\"utf-8\" />\n<title>%@</title>\n</head>\n<body>\n<h1>%@</h1><ul>\n", path, path];
         NSArray *paths = [[fm contentsOfDirectoryAtPath:root error:NULL] sortedArrayUsingSelector:@selector(localizedCompare:)];
         
         if (![path isEqualToString:@"/"])
@@ -62,7 +62,7 @@ static inline NSString *__CGISizeString(unsigned long long size)
             }
         }
         
-        [content appendString:@"</li>\n</body>\n</html>\n"];
+        [content appendString:@"</li>\n<div>\n<hr />\n<address>CGIKit 5.0 - &copy; 2013 muski</address>\n</body>\n</html>\n"];
         
         NSDictionary *resp = @{@"Content-Type": @"text/html"};
         *response = resp;
