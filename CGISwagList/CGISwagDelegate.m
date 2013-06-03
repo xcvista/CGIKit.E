@@ -62,7 +62,7 @@ static inline NSString *__CGISizeString(unsigned long long size)
             }
         }
         
-        [content appendString:@"</li>\n<div>\n<hr />\n<address>CGIKit 5.0 - &copy; 2013 muski</address>\n</body>\n</html>\n"];
+        [content appendString:@"</ul>\n<div>\n<hr />\n<address>CGIKit 5.0 - &copy; 2013 muski</address>\n</body>\n</html>\n"];
         
         NSDictionary *resp = @{@"Content-Type": @"text/html"};
         *response = resp;
