@@ -10,11 +10,6 @@
 
 @implementation CGITestApplicationDelegate
 
-- (NSData *)application:(CGIApplication *)application dataFromProcessingHTTPRequest:(NSDictionary *)request requestData:(NSData *)data withResponse:(NSDictionary *__autoreleasing *)response
-{
-    NSDictionary *resp = @{@"Content-Type": @"text/plain"};
-    *response = resp;
-    return [@"hello, world" dataUsingEncoding:NSUTF8StringEncoding];
-}
+
 
 @end

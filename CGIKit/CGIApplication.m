@@ -157,8 +157,7 @@ int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, c
 
 - (CGIHTTPResponse *)responseFromProcessingRequest:(CGIHTTPRequest *)request
 {
-    [self doesNotRecognizeSelector:_cmd];
-    return nil;
+    return [self.delegate application:self responseFromProcessingRequest:request];
 }
 
 @end
