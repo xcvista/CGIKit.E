@@ -28,7 +28,7 @@
 		1D72DAFB17597D500020E96C /* CGIFastApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAF917597D500020E96C /* CGIFastApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D72DAFC17597D500020E96C /* CGIFastApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAFA17597D500020E96C /* CGIFastApplication.m */; };
 		1D72DAFE175A234E0020E96C /* CGICommon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAFD175A234D0020E96C /* CGICommon.c */; };
-		1D72DB01175A23D10020E96C /* CGIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAFF175A23D00020E96C /* CGIHTTPRequest.h */; };
+		1D72DB01175A23D10020E96C /* CGIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAFF175A23D00020E96C /* CGIHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D72DB02175A23D10020E96C /* CGIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DB00175A23D00020E96C /* CGIHTTPRequest.m */; };
 		1DDED8E3177BCA91001CD4FD /* CGIHTTPResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDED8E1177BCA91001CD4FD /* CGIHTTPResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DDED8E4177BCA91001CD4FD /* CGIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDED8E2177BCA91001CD4FD /* CGIHTTPResponse.m */; };
@@ -82,7 +82,6 @@
 		1D72DADC1759494F0020E96C /* GNUmakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		1D72DAE4175951020020E96C /* CGISwagList.cgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CGISwagList.cgi; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D72DAE7175951020020E96C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		1D72DAEA175951020020E96C /* CGISwagList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGISwagList-Prefix.pch"; sourceTree = "<group>"; };
 		1D72DAEB175951020020E96C /* CGISwagList.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CGISwagList.1; sourceTree = "<group>"; };
 		1D72DAF1175951550020E96C /* CGISwagDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGISwagDelegate.h; sourceTree = "<group>"; };
 		1D72DAF2175951550020E96C /* CGISwagDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGISwagDelegate.m; sourceTree = "<group>"; };
@@ -243,7 +242,6 @@
 		1D72DAE9175951020020E96C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1D72DAEA175951020020E96C /* CGISwagList-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -566,8 +564,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CGISwagList/CGISwagList-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -600,8 +596,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CGISwagList/CGISwagList-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
