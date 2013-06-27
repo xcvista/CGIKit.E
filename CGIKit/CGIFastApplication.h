@@ -6,7 +6,7 @@
 //
 //
 
-#import <CGIKit/CGIKit.h>
+#import <CGIKit/CGIApplication.h>
 
 /*
  * ====================================
