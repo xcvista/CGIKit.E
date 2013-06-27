@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 muski. All rights reserved.
 //
 
-#import <CGIKit/CGIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface CGIHTTPRequest : CGIApplication
+@interface CGIHTTPRequest : NSObject
 
 @property NSDictionary *requestFields;
 @property NSData *requestData;
