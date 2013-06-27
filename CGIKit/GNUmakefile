@@ -2,8 +2,8 @@ include $(GNUSTEP_MAKEFILES)/common.make
 
 FRAMEWORK_NAME := CGIKit
 
-CGIKit_HEADER_FILES := CGIKit.h CGICommon.h CGIApplication.h CGIFastApplication.h
-CGIKit_OBJC_FILES := CGIApplication.m CGIFastApplication.m
+CGIKit_HEADER_FILES := CGIKit.h CGICommon.h CGIApplication.h CGIFastApplication.h CGIHTTPRequest.h CGIHTTPResponse.h
+CGIKit_OBJC_FILES := CGIApplication.m CGIFastApplication.m CGIHTTPRequest.m CGIHTTPResponse.m
 CGIKit_C_FILES := CGICommon.c
 CGIKit_VERSION := 5.0
 CGIKit_CURRENT_VERSION_NAME := E
