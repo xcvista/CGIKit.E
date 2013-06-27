@@ -7,6 +7,8 @@
 //
 
 #import "CGIApplication.h"
+#import "CGIHTTPRequest.h"
+#import "CGIHTTPResponse.h"
 #import "CGICommon_Private.h"
 
 CGIConstantString(CGIApplicationException, @"info.maxchan.cgikit.exception");
@@ -133,14 +135,30 @@ int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, c
     }
     else
     {
-        CGIHTTPRequest *request = nil;
-        CGIHTTPResponse *response = [self responseFromProcessingRequest:request];
+        CGIHTTPRequest *_request = [[CGIHTTPRequest alloc] initWithRequestFields:request
+                                                                           data:data];
+        CGIHTTPResponse *_response = nil;
+        
+        @try
+        {
+            _response = [self responseFromProcessingRequest:_request];
+        }
+        @catch (NSException *exception)
+        {
+            _response = [CGIHTTPResponse responseWithException:exception];
+        }
+        
+        if (response)
+            *response = [NSDictionary dictionaryWithDictionary:_response.responseHeaders];
+        
+        return _response.responseData;
     }
 }
 
 - (CGIHTTPResponse *)responseFromProcessingRequest:(CGIHTTPRequest *)request
 {
-    
+    [self doesNotRecognizeSelector:_cmd];
+    return nil;
 }
 
 @end

@@ -10,4 +10,14 @@
 
 @implementation CGIHTTPRequest
 
+- (id)initWithRequestFields:(NSDictionary *)request data:(NSData *)data
+{
+    if (self = [super init])
+    {
+        self.requestData = data;
+        self.requestFields = request;
+    }
+    return self;
+}
+
 @end

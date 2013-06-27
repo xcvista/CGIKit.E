@@ -15,6 +15,8 @@
 #ifdef __OBJC__
 
 #import <CGIKit/CGIFastApplication.h>
+#import <CGIKit/CGIHTTPRequest.h>
+#import <CGIKit/CGIHTTPResponse.h>
 
 #endif
 
