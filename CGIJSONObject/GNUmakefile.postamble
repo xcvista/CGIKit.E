@@ -1,0 +1,10 @@
+
+after-all::
+	-ln -sf FusionKit.framework/Headers FusionKit
+	-ln -sf FusionKit.framework/libFusionKit.so libFusionKit.so
+
+before-clean::
+	-rm FusionKit
+	-rm libFusionKit.so
+
+	

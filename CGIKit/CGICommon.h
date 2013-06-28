@@ -177,8 +177,14 @@ static CGIInline void CGILog(NSString *format, ...)
     va_end(args);
 }
 
-#define CGIEncode(type) @(@encode(type))
+#define CGIAssignPointer(_ptr, _val) do { typeof(_ptr) ptr = (_ptr); if (ptr) *ptr = (_val); } while (0)
 
+#endif
+
+#ifdef DEBUG
+#define dbgprintf(...) fprintf(stderr, __VA_ARGS__)
+#else
+#define dbgprintf(...)
 #endif
 
 #endif
