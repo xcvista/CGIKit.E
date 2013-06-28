@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 muski. All rights reserved.
 //
 
-#import <CGIJSONObject/CGIJSONObject.h>
+#import <Foundation/Foundation.h>
 
 extern NSString *const CGIHTTPErrorDomain __attribute__((weak));
 extern NSString *const CGIRemoteConnectionServerRootKey; // = @"CGIRemoteConnectionServerRoot";

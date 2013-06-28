@@ -7,6 +7,11 @@
 //
 
 #import "CGIRemoteConnection.h"
+#if __has_include(<CGIKit/CGIKit.h>)
+#import <CGIKit/CGIKit.h>
+#else
+#import "CGICommon.h"
+#endif
 
 CGIRemoteConnection *__defaultRemoteConnection;
 

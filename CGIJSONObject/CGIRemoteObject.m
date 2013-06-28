@@ -10,6 +10,11 @@
 #import "CGIRemoteConnection.h"
 #import <objc/message.h>
 #import <objc/runtime.h>
+#if __has_include(<CGIKit/CGIKit.h>)
+#import <CGIKit/CGIKit.h>
+#else
+#import "CGICommon.h"
+#endif
 
 id objc_retain(id);
 

@@ -7,7 +7,11 @@
 //
 
 #import "CGIPersistantObject.h"
+#if __has_include(<CGIKit/CGIKit.h>)
 #import <CGIKit/CGIKit.h>
+#else
+#import "CGICommon.h"
+#endif
 #import <objc/runtime.h>
 #import <objc/message.h>
 

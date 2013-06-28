@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 muski. All rights reserved.
 //
 
-#import <CGIJSONObject/CGIJSONObject.h>
+#import <CGIJSONObject/CGIPersistantObject.h>
 
 #define CGIRemoteMethodClass(__method, __class) \
 - (Class)classForMethod ##__method { return [__class class]; }
