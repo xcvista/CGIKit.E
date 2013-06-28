@@ -43,7 +43,7 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
     return [self initWithServerRoot:nil];
 }
 
-- (id)initWithServerRoot:(NSURL *)serverRoot
+- (id)initWithServerRoot:(NSString *)serverRoot
 {
     if (self = [super init])
     {
@@ -60,7 +60,12 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
 
 - (NSMutableURLRequest *)URLRequestForMethod:(NSString *)method
 {
-    NSURL *methodURL = [NSURL URLWithString:method relativeToURL:self.serverRoot];
+    if (!self.serverRoot)
+    {
+        [NSException raise:@"CGINotReadyException" format:@"No server root is provided."];
+    }
+    
+    NSURL *methodURL = [NSURL URLWithString:CGISTR(self.serverRoot, method)];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:methodURL];
     [request setValue:[self userAgent]
    forHTTPHeaderField:@"User-Agent"];
@@ -72,10 +77,6 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
               fromMethod:(NSString *)method
                    error:(NSError *__autoreleasing *)error
 {
-    if (!self.serverRoot)
-    {
-        [NSException raise:@"CGINotReadyException" format:@"No server root is provided."];
-    }
     
     NSMutableURLRequest *request = [self URLRequestForMethod:method];
     

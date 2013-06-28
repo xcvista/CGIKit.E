@@ -14,5 +14,7 @@
 @property NSMutableData *responseData;
 
 + (instancetype)responseWithException:(NSException *)exception;
++ (instancetype)responseWithData:(NSData *)data type:(NSString *)type;
++ (instancetype)responseWithRedirectionToAddress:(NSString *)target;
 
 @end

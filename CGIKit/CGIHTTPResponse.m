@@ -64,4 +64,20 @@
     return response;
 }
 
++ (instancetype)responseWithData:(NSData *)data type:(NSString *)type
+{
+    CGIHTTPResponse *resp = [[self alloc] init];
+    [resp.responseData setData:data];
+    resp.responseHeaders[@"Content-Type"] = type;
+    return resp;
+}
+
++ (instancetype)responseWithRedirectionToAddress:(NSString *)target
+{
+    CGIHTTPResponse *resp = [[self alloc] init];
+    resp.responseHeaders[@"Status"] = @302;
+    resp.responseHeaders[@"Location"] = target;
+    return resp;
+}
+
 @end

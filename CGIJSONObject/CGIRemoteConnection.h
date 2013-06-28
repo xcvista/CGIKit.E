@@ -13,11 +13,11 @@ extern NSString *const CGIRemoteConnectionServerRootKey; // = @"CGIRemoteConnect
 
 @interface CGIRemoteConnection : NSObject
 
-@property NSURL *serverRoot;
+@property NSString *serverRoot;
 
 + (instancetype)defaultRemoteConnection;
 
-- (id)initWithServerRoot:(NSURL *)serverRoot;
+- (id)initWithServerRoot:(NSString *)serverRoot;
 
 - (void)makeDefaultServerRoot;
 
