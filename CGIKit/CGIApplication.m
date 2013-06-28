@@ -142,6 +142,11 @@ int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, c
         @try
         {
             _response = [self responseFromProcessingRequest:_request];
+            
+            if (!_response)
+            {
+                [NSException raise:CGIApplicationException format:@"No response found."];
+            }
         }
         @catch (NSException *exception)
         {
