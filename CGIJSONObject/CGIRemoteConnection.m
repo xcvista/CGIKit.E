@@ -7,7 +7,7 @@
 //
 
 #import "CGIRemoteConnection.h"
-#if __has_include(<CGIKit/CGIKit.h>)
+#if !TARGET_OS_IPHONE
 #import <CGIKit/CGIKit.h>
 #else
 #import "CGICommon.h"

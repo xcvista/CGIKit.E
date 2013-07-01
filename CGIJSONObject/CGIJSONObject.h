@@ -9,10 +9,10 @@
 #ifndef CGIJSONKit_CGIJSONObject_h
 #define CGIJSONKit_CGIJSONObject_h
 
-#if __has_include(<CGIKit/CGIKit.h>)
-#import <CGIKit/CGIKit.h>
-#else
 #import <Foundation/Foundation.h>
+
+#if !TARGET_OS_IPHONE
+#import <CGIKit/CGIKit.h>
 #endif
 
 #import <CGIJSONObject/CGIPersistantObject.h>
