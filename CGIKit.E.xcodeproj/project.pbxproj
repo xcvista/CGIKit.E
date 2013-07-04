@@ -52,6 +52,18 @@
 		1DA56E92177C1CCF00EBE5DD /* CGIRemoteConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA56E8E177C1CCF00EBE5DD /* CGIRemoteConnection.m */; };
 		1DA56E93177C1CCF00EBE5DD /* CGIRemoteObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E8F177C1CCF00EBE5DD /* CGIRemoteObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DA56E94177C1CCF00EBE5DD /* CGIRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA56E90177C1CCF00EBE5DD /* CGIRemoteObject.m */; };
+		1DAD9DA61784FC9600B52C72 /* NSData+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA01784FC9600B52C72 /* NSData+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DAD9DA71784FC9600B52C72 /* NSData+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA01784FC9600B52C72 /* NSData+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DAD9DA81784FC9600B52C72 /* NSData+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA11784FC9600B52C72 /* NSData+DCPersistance.m */; };
+		1DAD9DA91784FC9600B52C72 /* NSData+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA11784FC9600B52C72 /* NSData+DCPersistance.m */; };
+		1DAD9DAA1784FC9600B52C72 /* NSDate+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA21784FC9600B52C72 /* NSDate+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DAD9DAB1784FC9600B52C72 /* NSDate+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA21784FC9600B52C72 /* NSDate+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DAD9DAC1784FC9600B52C72 /* NSDate+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA31784FC9600B52C72 /* NSDate+DCPersistance.m */; };
+		1DAD9DAD1784FC9600B52C72 /* NSDate+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA31784FC9600B52C72 /* NSDate+DCPersistance.m */; };
+		1DAD9DAE1784FC9600B52C72 /* NSURL+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA41784FC9600B52C72 /* NSURL+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DAD9DAF1784FC9600B52C72 /* NSURL+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA41784FC9600B52C72 /* NSURL+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DAD9DB01784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */; };
+		1DAD9DB11784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */; };
 		1DDED8E3177BCA91001CD4FD /* CGIHTTPResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDED8E1177BCA91001CD4FD /* CGIHTTPResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DDED8E4177BCA91001CD4FD /* CGIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDED8E2177BCA91001CD4FD /* CGIHTTPResponse.m */; };
 /* End PBXBuildFile section */
@@ -129,6 +141,12 @@
 		1DA56E8E177C1CCF00EBE5DD /* CGIRemoteConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIRemoteConnection.m; sourceTree = "<group>"; };
 		1DA56E8F177C1CCF00EBE5DD /* CGIRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIRemoteObject.h; sourceTree = "<group>"; };
 		1DA56E90177C1CCF00EBE5DD /* CGIRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIRemoteObject.m; sourceTree = "<group>"; };
+		1DAD9DA01784FC9600B52C72 /* NSData+DCPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DCPersistance.h"; sourceTree = "<group>"; };
+		1DAD9DA11784FC9600B52C72 /* NSData+DCPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DCPersistance.m"; sourceTree = "<group>"; };
+		1DAD9DA21784FC9600B52C72 /* NSDate+DCPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DCPersistance.h"; sourceTree = "<group>"; };
+		1DAD9DA31784FC9600B52C72 /* NSDate+DCPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DCPersistance.m"; sourceTree = "<group>"; };
+		1DAD9DA41784FC9600B52C72 /* NSURL+DCPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+DCPersistance.h"; sourceTree = "<group>"; };
+		1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+DCPersistance.m"; sourceTree = "<group>"; };
 		1DDED8E1177BCA91001CD4FD /* CGIHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPResponse.h; sourceTree = "<group>"; };
 		1DDED8E2177BCA91001CD4FD /* CGIHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -316,6 +334,12 @@
 				1DA56E8E177C1CCF00EBE5DD /* CGIRemoteConnection.m */,
 				1DA56E8F177C1CCF00EBE5DD /* CGIRemoteObject.h */,
 				1DA56E90177C1CCF00EBE5DD /* CGIRemoteObject.m */,
+				1DAD9DA01784FC9600B52C72 /* NSData+DCPersistance.h */,
+				1DAD9DA11784FC9600B52C72 /* NSData+DCPersistance.m */,
+				1DAD9DA21784FC9600B52C72 /* NSDate+DCPersistance.h */,
+				1DAD9DA31784FC9600B52C72 /* NSDate+DCPersistance.m */,
+				1DAD9DA41784FC9600B52C72 /* NSURL+DCPersistance.h */,
+				1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */,
 				1DA56E8B177C1B7700EBE5DD /* Linux */,
 				1DA56E5D177C1B2B00EBE5DD /* Supporting Files */,
 			);
@@ -348,11 +372,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DAD9DA71784FC9600B52C72 /* NSData+DCPersistance.h in Headers */,
 				1D091F2B177D2331001BCCC6 /* CGIJSONObject.h in Headers */,
+				1DAD9DAF1784FC9600B52C72 /* NSURL+DCPersistance.h in Headers */,
 				1D091F2C177D2331001BCCC6 /* CGIPersistantObject.h in Headers */,
 				1D091F2D177D2331001BCCC6 /* CGIRemoteConnection.h in Headers */,
 				1D091F2E177D2331001BCCC6 /* CGIRemoteObject.h in Headers */,
 				1D091F2F177D2339001BCCC6 /* CGICommon.h in Headers */,
+				1DAD9DAB1784FC9600B52C72 /* NSDate+DCPersistance.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +401,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DAD9DAA1784FC9600B52C72 /* NSDate+DCPersistance.h in Headers */,
 				1DA56E86177C1B6E00EBE5DD /* CGIPersistantObject.h in Headers */,
 				1DA56E93177C1CCF00EBE5DD /* CGIRemoteObject.h in Headers */,
+				1DAD9DA61784FC9600B52C72 /* NSData+DCPersistance.h in Headers */,
 				1DA56E85177C1B6E00EBE5DD /* CGIJSONObject.h in Headers */,
+				1DAD9DAE1784FC9600B52C72 /* NSURL+DCPersistance.h in Headers */,
 				1DA56E91177C1CCF00EBE5DD /* CGIRemoteConnection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,8 +614,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D091F28177D231C001BCCC6 /* CGIPersistantObject.m in Sources */,
+				1DAD9DB11784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */,
 				1D091F29177D231C001BCCC6 /* CGIRemoteConnection.m in Sources */,
 				1D091F2A177D231C001BCCC6 /* CGIRemoteObject.m in Sources */,
+				1DAD9DA91784FC9600B52C72 /* NSData+DCPersistance.m in Sources */,
+				1DAD9DAD1784FC9600B52C72 /* NSDate+DCPersistance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,8 +657,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA56E87177C1B6E00EBE5DD /* CGIPersistantObject.m in Sources */,
+				1DAD9DB01784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */,
 				1DA56E92177C1CCF00EBE5DD /* CGIRemoteConnection.m in Sources */,
 				1DA56E94177C1CCF00EBE5DD /* CGIRemoteObject.m in Sources */,
+				1DAD9DA81784FC9600B52C72 /* NSData+DCPersistance.m in Sources */,
+				1DAD9DAC1784FC9600B52C72 /* NSDate+DCPersistance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1063,7 @@
 				1D091F23177D2284001BCCC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D72DA98175922FD0020E96C /* Build configuration list for PBXProject "CGIKit.E" */ = {
 			isa = XCConfigurationList;

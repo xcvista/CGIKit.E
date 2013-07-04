@@ -18,5 +18,8 @@
 #import <CGIJSONObject/CGIPersistantObject.h>
 #import <CGIJSONObject/CGIRemoteConnection.h>
 #import <CGIJSONObject/CGIRemoteObject.h>
+#import <CGIJSONObject/NSData+DCPersistance.h>
+#import <CGIJSONObject/NSDate+DCPersistance.h>
+#import <CGIJSONObject/NSURL+DCPersistance.h>
 
 #endif
