@@ -329,6 +329,12 @@
     return class;
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    id object = [self persistaceObject];
+    return [[[self class] allocWithZone:zone] initWithPersistanceObject:object];
+}
+
 @end
 
 @implementation CGIPersistantObject (CGIJSONObject)

@@ -13,7 +13,7 @@
 #define CGIIdentifierProperty @property id ID
 #define CGIType(type) @(@encode(type))
 
-@protocol CGIPersistantObject <NSObject, NSCoding>
+@protocol CGIPersistantObject <NSObject, NSCoding, NSCopying>
 
 - (id)initWithPersistanceObject:(id)persistance;
 - (id)persistaceObject;
