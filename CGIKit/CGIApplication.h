@@ -15,6 +15,13 @@ CGIBeginDecls
 
 CGIClass CGIApplication;
 
+/**
+ Main entry point of an CGIKit application.
+ 
+ @param     argc            Count of command-line arguments.
+ @param     argv            Command-line argument vector.
+ @param     delegateClass   Name of delegate class of
+ */
 CGIExtern int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, const char *applicationClass) CGINoReturn;
 CGIExtern id CGIApp;
 
