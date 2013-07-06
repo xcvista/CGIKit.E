@@ -61,7 +61,7 @@
                     if (!readonly && value)
                     {
                         // Dispatching would require some tricks.
-                        if ([type hasPrefix:CGIType(id)])                    // Objects. Special requirements is required.
+                        if ([type hasPrefix:CGIType(id)])                   // Objects. Special requirements is required.
                         {
                             Class class = [self classForKey:name];
                             id object = value;
@@ -334,6 +334,12 @@
     id object = [self persistaceObject];
     return [[[self class] allocWithZone:zone] initWithPersistanceObject:object];
 }
+
+@end
+
+@interface CGIPersistantObject (CGIIdentifier)
+
+- (id)ID;
 
 @end
 
