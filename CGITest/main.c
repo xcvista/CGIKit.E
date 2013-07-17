@@ -8,8 +8,8 @@
 
 #include <CGIKit/CGIKit.h>
 
-int main(int argc, const char * argv[])
+int main(int argc, const char **argv)
 {
-    return CGIApplicationMain(argc, argv, "CGITestApplicationDelegate", NULL);
+    return CGIApplicationMain(argc, argv, "CGITestApplicationDelegate", "CGIFastApplication");
 }
 

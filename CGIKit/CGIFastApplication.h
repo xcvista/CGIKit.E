@@ -8,13 +8,8 @@
 
 #import <CGIKit/CGIApplication.h>
 
-/*
- * ====================================
- * CGIFastApplication
- * ------------------------------------
- * Fast CGI application (UNIX socket).
- * Good for web apps.
- * ====================================
+/**
+ * Fast CGI application (UNIX socket). Good for web apps.
  */
 
 @interface CGIFastApplication : CGIApplication

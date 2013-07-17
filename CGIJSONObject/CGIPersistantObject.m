@@ -286,6 +286,7 @@
                         [outputArray addObject:object];
                     }
                 }
+                value = outputArray;
             }
             
             dictionary[name] = value;

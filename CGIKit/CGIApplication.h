@@ -33,6 +33,9 @@ CGIEndDecls
 
 @class CGIHTTPRequest, CGIHTTPResponse;
 
+/**
+ Application delegate
+ */
 @protocol CGIApplicationDelegate <NSObject>
 
 @optional
@@ -43,18 +46,13 @@ CGIEndDecls
 - (void)application:(CGIApplication *)application didReceiveRequestData:(NSData *)data;
 - (void)application:(CGIApplication *)application willWriteResponseHeader:(NSDictionary *)response;
 - (void)application:(CGIApplication *)application willWriteResponseData:(NSData *)data;
+- (void)applicationWillTerminate:(CGIApplication *)application;
 
 @end
 
-/* 
- * ====================================
- * CGIApplication
- * ------------------------------------
- * One-off classical CGI application.
- * Good for small web utilities.
- * ====================================
+/**
+ * One-off classical CGI application. Good for small web utilities.
  */
-
 @interface CGIApplication : NSObject
 
 @property id<CGIApplicationDelegate> delegate;
@@ -69,6 +67,7 @@ CGIEndDecls
 - (void)applicationDidReceiveRequestData:(NSData *)data;
 - (void)applicationWillWriteResponseHeader:(NSDictionary *)response;
 - (void)applicationWillWriteResponseData:(NSData *)data;
+- (void)applicationWillTerminate;
 
 @end
 

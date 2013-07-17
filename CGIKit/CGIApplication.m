@@ -97,6 +97,8 @@ int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, c
     NSFileHandle *_stdout = [NSFileHandle fileHandleWithStandardOutput];
     [_stdout writeData:responseData];
     
+    [self applicationWillTerminate];
+    
     exit(0);
 }
 
@@ -122,6 +124,12 @@ int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, c
 {
     if ([self.delegate respondsToSelector:@selector(application:willWriteResponseHeader:)])
         [self.delegate application:self willWriteResponseHeader:response];
+}
+
+- (void)applicationWillTerminate
+{
+    if ([self.delegate respondsToSelector:@selector(applicationWillTerminate:)])
+        [self.delegate applicationWillTerminate:self];
 }
 
 - (NSData *)dataFromProcessingHTTPRequest:(NSDictionary *)request requestData:(NSData *)data withResponse:(NSDictionary *__autoreleasing *)response

@@ -15,7 +15,7 @@
 		1D091F2C177D2331001BCCC6 /* CGIPersistantObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E80177C1B6E00EBE5DD /* CGIPersistantObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D091F2D177D2331001BCCC6 /* CGIRemoteConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E8D177C1CCF00EBE5DD /* CGIRemoteConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D091F2E177D2331001BCCC6 /* CGIRemoteObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E8F177C1CCF00EBE5DD /* CGIRemoteObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D091F2F177D2339001BCCC6 /* CGICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAB6175923480020E96C /* CGICommon.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1D091F2F177D2339001BCCC6 /* CGICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAB6175923480020E96C /* CGICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D72DAA4175923090020E96C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72DAA3175923090020E96C /* Cocoa.framework */; };
 		1D72DAAE175923090020E96C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D72DAAC175923090020E96C /* InfoPlist.strings */; };
 		1D72DAB91759259A0020E96C /* CGIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAB71759259A0020E96C /* CGIApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +66,7 @@
 		1DAD9DAF1784FC9600B52C72 /* NSURL+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA41784FC9600B52C72 /* NSURL+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DAD9DB01784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */; };
 		1DAD9DB11784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */; };
+		1DBA0B47179544E900E760E5 /* libfcgi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DBA0B46179544E900E760E5 /* libfcgi.a */; };
 		1DDED8E3177BCA91001CD4FD /* CGIHTTPResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDED8E1177BCA91001CD4FD /* CGIHTTPResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DDED8E4177BCA91001CD4FD /* CGIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDED8E2177BCA91001CD4FD /* CGIHTTPResponse.m */; };
 /* End PBXBuildFile section */
@@ -153,6 +154,14 @@
 		1DAD9DA31784FC9600B52C72 /* NSDate+DCPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DCPersistance.m"; sourceTree = "<group>"; };
 		1DAD9DA41784FC9600B52C72 /* NSURL+DCPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+DCPersistance.h"; sourceTree = "<group>"; };
 		1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+DCPersistance.m"; sourceTree = "<group>"; };
+		1DBA0B3F179544CC00E760E5 /* fastcgi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fastcgi.h; sourceTree = "<group>"; };
+		1DBA0B40179544CC00E760E5 /* fcgi_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fcgi_config.h; sourceTree = "<group>"; };
+		1DBA0B41179544CC00E760E5 /* fcgi_stdio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fcgi_stdio.h; sourceTree = "<group>"; };
+		1DBA0B42179544CC00E760E5 /* fcgiapp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fcgiapp.h; sourceTree = "<group>"; };
+		1DBA0B43179544CC00E760E5 /* fcgimisc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fcgimisc.h; sourceTree = "<group>"; };
+		1DBA0B44179544CC00E760E5 /* fcgio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fcgio.h; sourceTree = "<group>"; };
+		1DBA0B45179544CC00E760E5 /* fcgios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fcgios.h; sourceTree = "<group>"; };
+		1DBA0B46179544E900E760E5 /* libfcgi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfcgi.a; sourceTree = "<group>"; };
 		1DDED8E1177BCA91001CD4FD /* CGIHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPResponse.h; sourceTree = "<group>"; };
 		1DDED8E2177BCA91001CD4FD /* CGIHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DBA0B47179544E900E760E5 /* libfcgi.a in Frameworks */,
 				1D72DAA4175923090020E96C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +252,7 @@
 		1D72DAA2175923090020E96C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1DBA0B46179544E900E760E5 /* libfcgi.a */,
 				1D72DAA3175923090020E96C /* Cocoa.framework */,
 				1D72DAC8175942BA0020E96C /* Foundation.framework */,
 				1DA56E6B177C1B2B00EBE5DD /* XCTest.framework */,
@@ -264,6 +275,7 @@
 		1D72DAA9175923090020E96C /* CGIKit */ = {
 			isa = PBXGroup;
 			children = (
+				1DBA0B3E1795449E00E760E5 /* fastcgi */,
 				1D72DAB0175923090020E96C /* CGIKit.h */,
 				1D72DAB6175923480020E96C /* CGICommon.h */,
 				1D72DAFD175A234D0020E96C /* CGICommon.c */,
@@ -397,6 +409,20 @@
 				1DA56E84177C1B6E00EBE5DD /* GNUmakefile.preamble */,
 			);
 			name = Linux;
+			sourceTree = "<group>";
+		};
+		1DBA0B3E1795449E00E760E5 /* fastcgi */ = {
+			isa = PBXGroup;
+			children = (
+				1DBA0B3F179544CC00E760E5 /* fastcgi.h */,
+				1DBA0B40179544CC00E760E5 /* fcgi_config.h */,
+				1DBA0B41179544CC00E760E5 /* fcgi_stdio.h */,
+				1DBA0B42179544CC00E760E5 /* fcgiapp.h */,
+				1DBA0B43179544CC00E760E5 /* fcgimisc.h */,
+				1DBA0B44179544CC00E760E5 /* fcgio.h */,
+				1DBA0B45179544CC00E760E5 /* fcgios.h */,
+			);
+			path = fastcgi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -895,6 +921,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "CGIKit/CGIKit-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -928,6 +958,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "CGIKit/CGIKit-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1274,6 +1308,7 @@
 				1D81FA28178BA30A006AB2D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DA56E7D177C1B2B00EBE5DD /* Build configuration list for PBXNativeTarget "CGIJSONObject" */ = {
 			isa = XCConfigurationList;
