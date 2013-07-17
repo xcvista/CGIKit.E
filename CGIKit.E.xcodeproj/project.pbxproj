@@ -22,7 +22,7 @@
 		1D72DABA1759259A0020E96C /* CGIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAB81759259A0020E96C /* CGIApplication.m */; };
 		1D72DABB175925C90020E96C /* CGIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAB0175923090020E96C /* CGIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D72DABC175925C90020E96C /* CGICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAB6175923480020E96C /* CGICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D72DABE175931570020E96C /* CGICommon_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DABD175931570020E96C /* CGICommon_Private.h */; };
+		1D72DABE175931570020E96C /* CGICommon_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DABD175931570020E96C /* CGICommon_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D72DAC9175942BA0020E96C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72DAC8175942BA0020E96C /* Foundation.framework */; };
 		1D72DACC175942BB0020E96C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DACB175942BB0020E96C /* main.c */; };
 		1D72DAD0175942BB0020E96C /* CGITest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D72DACF175942BB0020E96C /* CGITest.1 */; };
