@@ -28,6 +28,20 @@
     return self;
 }
 
++ (NSString *)addressLine
+{
+    static NSString *address;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        char buf[10] = {0};
+        time_t _time = time(NULL);
+        strftime(buf, 10, "%Y", localtime(&_time));
+        address = CGISTR(@"<address>Powered by CGIKit 5.1. &copy; %s.</address>\n", buf);
+    });
+
+    return address;
+}
+
 + (instancetype)responseWithException:(NSException *)exception
 {
     CGIHTTPResponse *response = [[self alloc] init];
@@ -49,7 +63,7 @@
                                                                 "<pre>%@</pre>\n"
                                                                 "<div>\n"
                                                                 "<hr />\n"
-                                                                "<address>&copy; %s CGIKit 5.0</address>\n"
+                                                                "%@"
                                                                 "</div>\n"
                                                                 "</body>\n"
                                                                 "</html>\n",
@@ -58,7 +72,42 @@
                                                                 [exception name],
                                                                 [exception reason],
                                                                 [[exception callStackSymbols] componentsJoinedByString:@"\n"],
-                                                                buf
+                                                                [self addressLine]
+                                                                ) dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    return response;
+}
+
++ (instancetype)responseWithError:(NSError *)error
+{
+    CGIHTTPResponse *response = [[self alloc] init];
+    
+    char buf[10] = {0};
+    time_t _time = time(NULL);
+    strftime(buf, 10, "%Y", localtime(&_time));
+    
+    response.responseHeaders[@"Status"] = @"500";
+    response.responseData = [NSMutableData dataWithData:[CGISTR(@""
+                                                                "<!DOCTYPE html>\n"
+                                                                "<html>\n"
+                                                                "<head>\n"
+                                                                "<title>HTTP 500: %@</title>\n"
+                                                                "</head>\n"
+                                                                "<body>\n"
+                                                                "<h1>%@ %ld: %@</h1>\n"
+                                                                "<p>%@</p>\n"
+                                                                "<div>\n"
+                                                                "<hr />\n"
+                                                                "%@"
+                                                                "</div>\n"
+                                                                "</body>\n"
+                                                                "</html>\n",
+                                                                [error localizedDescription],
+                                                                [error domain],
+                                                                [error code],
+                                                                [error localizedDescription],
+                                                                [error localizedFailureReason],
+                                                                [self addressLine]
                                                                 ) dataUsingEncoding:NSUTF8StringEncoding]];
     
     return response;

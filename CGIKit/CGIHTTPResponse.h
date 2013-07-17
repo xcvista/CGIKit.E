@@ -13,7 +13,10 @@
 @property NSMutableDictionary *responseHeaders;
 @property NSMutableData *responseData;
 
++ (NSString *)addressLine;
+
 + (instancetype)responseWithException:(NSException *)exception;
++ (instancetype)responseWithError:(NSError *)error;
 + (instancetype)responseWithData:(NSData *)data type:(NSString *)type;
 + (instancetype)responseWithRedirectionToAddress:(NSString *)target;
 
