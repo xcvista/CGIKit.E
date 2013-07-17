@@ -9,6 +9,8 @@
 #import "CGIFastApplication.h"
 #import "fastcgi/fcgi_stdio.h"
 
+const char *CGIFastApplicationName = "CGIFastApplication";
+
 @implementation CGIFastApplication
 
 - (void)run

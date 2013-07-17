@@ -12,6 +12,7 @@
 #import "CGICommon_Private.h"
 
 CGIConstantString(CGIApplicationException, @"info.maxchan.cgikit.exception");
+const char *CGIApplicationClassName = "CGIApplication";
 
 id CGIApp = nil;
 

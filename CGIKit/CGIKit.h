@@ -29,10 +29,10 @@
 
 #include <CGIKit/CGICommon.h>
 #include <CGIKit/CGIApplication.h>
+#include <CGIKit/CGIFastApplication.h>
 
 #ifdef __OBJC__
 
-#import <CGIKit/CGIFastApplication.h>
 #import <CGIKit/CGIHTTPRequest.h>
 #import <CGIKit/CGIHTTPResponse.h>
 

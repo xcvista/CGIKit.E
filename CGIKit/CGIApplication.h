@@ -24,6 +24,7 @@ CGIClass CGIApplication;
  */
 CGIExtern int CGIApplicationMain(int argc, const char **argv, const char *delegateClass, const char *applicationClass) CGINoReturn;
 CGIExtern id CGIApp;
+CGIExtern const char *CGIApplicationClassName;
 
 CGIConstantString(CGIApplicationException, @"info.maxchan.cgikit.exception");
 

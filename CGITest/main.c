@@ -10,6 +10,6 @@
 
 int main(int argc, const char **argv)
 {
-    return CGIApplicationMain(argc, argv, "CGITestApplicationDelegate", "CGIFastApplication");
+    return CGIApplicationMain(argc, argv, "CGITestApplicationDelegate", CGIFastApplicationName);
 }
 
