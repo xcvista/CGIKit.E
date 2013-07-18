@@ -69,6 +69,10 @@
 		1DBA0B47179544E900E760E5 /* libfcgi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DBA0B46179544E900E760E5 /* libfcgi.a */; };
 		1DDED8E3177BCA91001CD4FD /* CGIHTTPResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDED8E1177BCA91001CD4FD /* CGIHTTPResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DDED8E4177BCA91001CD4FD /* CGIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDED8E2177BCA91001CD4FD /* CGIHTTPResponse.m */; };
+		1DE700E81796E5A70011EDBF /* CGIServerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE700E61796E5A70011EDBF /* CGIServerObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DE700E91796E5A70011EDBF /* CGIServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE700E71796E5A70011EDBF /* CGIServerObject.m */; };
+		1DE700F01796F13A0011EDBF /* CGIMethodApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE700EE1796F13A0011EDBF /* CGIMethodApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DE700F11796F13A0011EDBF /* CGIMethodApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE700EF1796F13A0011EDBF /* CGIMethodApplication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -164,6 +168,10 @@
 		1DBA0B46179544E900E760E5 /* libfcgi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfcgi.a; sourceTree = "<group>"; };
 		1DDED8E1177BCA91001CD4FD /* CGIHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPResponse.h; sourceTree = "<group>"; };
 		1DDED8E2177BCA91001CD4FD /* CGIHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPResponse.m; sourceTree = "<group>"; };
+		1DE700E61796E5A70011EDBF /* CGIServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIServerObject.h; sourceTree = "<group>"; };
+		1DE700E71796E5A70011EDBF /* CGIServerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIServerObject.m; sourceTree = "<group>"; };
+		1DE700EE1796F13A0011EDBF /* CGIMethodApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIMethodApplication.h; sourceTree = "<group>"; };
+		1DE700EF1796F13A0011EDBF /* CGIMethodApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIMethodApplication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +292,8 @@
 				1D72DAB81759259A0020E96C /* CGIApplication.m */,
 				1D72DAF917597D500020E96C /* CGIFastApplication.h */,
 				1D72DAFA17597D500020E96C /* CGIFastApplication.m */,
+				1DE700EE1796F13A0011EDBF /* CGIMethodApplication.h */,
+				1DE700EF1796F13A0011EDBF /* CGIMethodApplication.m */,
 				1D72DAFF175A23D00020E96C /* CGIHTTPRequest.h */,
 				1D72DB00175A23D00020E96C /* CGIHTTPRequest.m */,
 				1DDED8E1177BCA91001CD4FD /* CGIHTTPResponse.h */,
@@ -380,6 +390,8 @@
 				1DA56E8E177C1CCF00EBE5DD /* CGIRemoteConnection.m */,
 				1DA56E8F177C1CCF00EBE5DD /* CGIRemoteObject.h */,
 				1DA56E90177C1CCF00EBE5DD /* CGIRemoteObject.m */,
+				1DE700E61796E5A70011EDBF /* CGIServerObject.h */,
+				1DE700E71796E5A70011EDBF /* CGIServerObject.m */,
 				1DAD9DA01784FC9600B52C72 /* NSData+DCPersistance.h */,
 				1DAD9DA11784FC9600B52C72 /* NSData+DCPersistance.m */,
 				1DAD9DA21784FC9600B52C72 /* NSDate+DCPersistance.h */,
@@ -451,6 +463,7 @@
 				1D72DABB175925C90020E96C /* CGIKit.h in Headers */,
 				1D72DABC175925C90020E96C /* CGICommon.h in Headers */,
 				1D72DABE175931570020E96C /* CGICommon_Private.h in Headers */,
+				1DE700F01796F13A0011EDBF /* CGIMethodApplication.h in Headers */,
 				1D72DAFB17597D500020E96C /* CGIFastApplication.h in Headers */,
 				1DDED8E3177BCA91001CD4FD /* CGIHTTPResponse.h in Headers */,
 				1D72DB01175A23D10020E96C /* CGIHTTPRequest.h in Headers */,
@@ -468,6 +481,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DE700E81796E5A70011EDBF /* CGIServerObject.h in Headers */,
 				1DAD9DAA1784FC9600B52C72 /* NSDate+DCPersistance.h in Headers */,
 				1DA56E86177C1B6E00EBE5DD /* CGIPersistantObject.h in Headers */,
 				1DA56E93177C1CCF00EBE5DD /* CGIRemoteObject.h in Headers */,
@@ -721,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D72DABA1759259A0020E96C /* CGIApplication.m in Sources */,
+				1DE700F11796F13A0011EDBF /* CGIMethodApplication.m in Sources */,
 				1DDED8E4177BCA91001CD4FD /* CGIHTTPResponse.m in Sources */,
 				1D72DAFC17597D500020E96C /* CGIFastApplication.m in Sources */,
 				1D72DAFE175A234E0020E96C /* CGICommon.c in Sources */,
@@ -759,6 +774,7 @@
 			files = (
 				1DA56E87177C1B6E00EBE5DD /* CGIPersistantObject.m in Sources */,
 				1DAD9DB01784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */,
+				1DE700E91796E5A70011EDBF /* CGIServerObject.m in Sources */,
 				1DA56E92177C1CCF00EBE5DD /* CGIRemoteConnection.m in Sources */,
 				1DA56E94177C1CCF00EBE5DD /* CGIRemoteObject.m in Sources */,
 				1DAD9DA81784FC9600B52C72 /* NSData+DCPersistance.m in Sources */,

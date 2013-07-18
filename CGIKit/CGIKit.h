@@ -30,6 +30,7 @@
 #include <CGIKit/CGICommon.h>
 #include <CGIKit/CGIApplication.h>
 #include <CGIKit/CGIFastApplication.h>
+#include <CGIKit/CGIMethodApplication.h>
 
 #ifdef __OBJC__
 

@@ -25,7 +25,7 @@ include $(GNUSTEP_MAKEFILES)/common.make
 FRAMEWORK_NAME += CGIJSONObject
 
 # FusionKit
-CGIJSONObject_OBJC_FILES += CGIPersistantObject.m
+CGIJSONObject_OBJC_FILES += CGIPersistantObject.m 
 CGIJSONObject_HEADER_FILES += CGIPersistantObject.h CGIJSONObject.h CGICommon.h
 CGIJSONObject_HEADER_FILES_INSTALL_DIR += CGIJSONObject
 CGIJSONObject_LANGUAGES += en

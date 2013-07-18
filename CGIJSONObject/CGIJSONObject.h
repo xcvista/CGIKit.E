@@ -18,6 +18,9 @@
 #import <CGIJSONObject/CGIPersistantObject.h>
 #import <CGIJSONObject/CGIRemoteConnection.h>
 #import <CGIJSONObject/CGIRemoteObject.h>
+#if !TARGET_OS_IPHONE
+#import <CGIJSONObject/CGIServerObject.h>
+#endif
 #import <CGIJSONObject/NSData+DCPersistance.h>
 #import <CGIJSONObject/NSDate+DCPersistance.h>
 #import <CGIJSONObject/NSURL+DCPersistance.h>
