@@ -9,6 +9,9 @@
 #import "CGIServerObject.h"
 
 @implementation CGIServerObject
+{
+    CGIHTTPRequest *_request;
+}
 
 + (NSString *)methodName
 {
@@ -17,19 +20,42 @@
 
 - (id)initWithRequest:(CGIHTTPRequest *)request
 {
-    if (self = [super initWithJSONData:request.requestData
-                                 error:NULL])
+    if ([request.requestData length])
     {
-        // I have nothing?
+        self = [super initWithJSONData:request.requestData error:NULL];
+    }
+    else
+    {
+        self = [super init];
+    }
+    
+    if (self)
+    {
+        _request = request;
     }
     return self;
 }
 
 - (CGIHTTPResponse *)responseFromProcessingObject
 {
-    return [CGIHTTPResponse responseWithError:[NSError errorWithDomain:NSPOSIXErrorDomain
-                                                                  code:ENOSYS
-                                                              userInfo:nil]];
+    id<CGIPersistantObject> object = [self objectFromProcessingRequest:_request];
+    NSError *err = nil;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:[object persistaceObject]
+                                                   options:0
+                                                     error:&err];
+    if (!data)
+    {
+        return [CGIHTTPResponse responseWithError:err];
+    }
+    else
+    {
+        return [CGIHTTPResponse responseWithData:data type:@"application/json"];
+    }
+}
+
+- (id<CGIPersistantObject>)objectFromProcessingRequest:(CGIHTTPRequest *)request
+{
+    return nil;
 }
 
 @end

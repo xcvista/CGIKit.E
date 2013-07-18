@@ -22,6 +22,15 @@ const char *CGIMethodApplicationName = "CGIMethodApplication";
 
 @dynamic delegate;
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.methods = [NSMutableDictionary dictionary];
+    }
+    return self;
+}
+
 - (BOOL)addHandler:(Class)handler
 {
     if ([handler conformsToProtocol:@protocol(CGIMethod)])

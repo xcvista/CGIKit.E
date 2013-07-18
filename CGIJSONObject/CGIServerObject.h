@@ -11,4 +11,6 @@
 
 @interface CGIServerObject : CGIPersistantObject <CGIMethod>
 
+- (id<CGIPersistantObject>)objectFromProcessingRequest:(CGIHTTPRequest *)request;
+
 @end
