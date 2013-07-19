@@ -107,6 +107,7 @@
 		1D091F13177D2284001BCCC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		1D303BC11798D774001882AB /* NSDictionary+DCPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DCPersistance.h"; sourceTree = "<group>"; };
 		1D303BC21798D774001882AB /* NSDictionary+DCPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DCPersistance.m"; sourceTree = "<group>"; };
+		1D303BCA1798EE17001882AB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1D72DAA0175923090020E96C /* CGIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D72DAA3175923090020E96C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D72DAA6175923090020E96C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -239,6 +240,7 @@
 		1D72DA94175922FD0020E96C = {
 			isa = PBXGroup;
 			children = (
+				1D303BCA1798EE17001882AB /* README.md */,
 				1D72DAD8175947430020E96C /* .gitignore */,
 				1D72DAA9175923090020E96C /* CGIKit */,
 				1D72DACA175942BA0020E96C /* CGITest */,
