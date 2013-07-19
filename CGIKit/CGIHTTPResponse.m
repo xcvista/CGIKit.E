@@ -42,6 +42,13 @@
     return address;
 }
 
++ (instancetype)emptyResponse
+{
+    CGIHTTPResponse *resp = [[CGIHTTPResponse alloc] init];
+    [resp.responseHeaders setDictionary:@{@"Status": @"204"}];
+    return resp;
+}
+
 + (instancetype)responseWithException:(NSException *)exception
 {
     CGIHTTPResponse *response = [[self alloc] init];

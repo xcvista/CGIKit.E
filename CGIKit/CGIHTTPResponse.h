@@ -15,6 +15,7 @@
 
 + (NSString *)addressLine;
 
++ (instancetype)emptyResponse;
 + (instancetype)responseWithException:(NSException *)exception;
 + (instancetype)responseWithError:(NSError *)error;
 + (instancetype)responseWithError:(NSError *)error statusCode:(NSUInteger)statusCode;

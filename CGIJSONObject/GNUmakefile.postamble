@@ -1,10 +1,10 @@
 
 after-all::
-	-ln -sf FusionKit.framework/Headers FusionKit
-	-ln -sf FusionKit.framework/libFusionKit.so libFusionKit.so
+	-ln -sf CGIJSONObject.framework/Headers CGIJSONObject
+	-ln -sf CGIJSONObject.framework/libFusionKit.so libCGIJSONObject.so
 
 before-clean::
-	-rm FusionKit
-	-rm libFusionKit.so
+	-rm CGIJSONObject
+	-rm libCGIJSONObject.so
 
 	
