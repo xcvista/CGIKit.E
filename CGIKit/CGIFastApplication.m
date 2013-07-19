@@ -64,6 +64,10 @@ const char *CGIFastApplicationName = "CGIFastApplication";
                 printf("%s: %s\n", CGICSTR(key), CGICSTR(value));
             }
         }
+        if ([responseData length] && !response[@"Content-Length"])
+        {
+            printf("Content-Length: %lu\n", [responseData length]);
+        }
         putchar('\n');
         fflush(stdout);
         

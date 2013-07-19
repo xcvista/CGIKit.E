@@ -17,7 +17,9 @@
 
 + (instancetype)responseWithException:(NSException *)exception;
 + (instancetype)responseWithError:(NSError *)error;
++ (instancetype)responseWithError:(NSError *)error statusCode:(NSUInteger)statusCode;
 + (instancetype)responseWithData:(NSData *)data type:(NSString *)type;
++ (instancetype)responseWithData:(NSData *)data type:(NSString *)type statusCode:(NSUInteger)statusCode;
 + (instancetype)responseWithRedirectionToAddress:(NSString *)target;
 
 @end

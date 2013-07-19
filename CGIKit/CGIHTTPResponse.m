@@ -80,18 +80,23 @@
 
 + (instancetype)responseWithError:(NSError *)error
 {
+    return [self responseWithError:error statusCode:500];
+}
+
++ (instancetype)responseWithError:(NSError *)error statusCode:(NSUInteger)statusCode
+{
     CGIHTTPResponse *response = [[self alloc] init];
     
     char buf[10] = {0};
     time_t _time = time(NULL);
     strftime(buf, 10, "%Y", localtime(&_time));
     
-    response.responseHeaders[@"Status"] = @"500";
+    response.responseHeaders[@"Status"] = CGISTR(@"%ld", statusCode);
     response.responseData = [NSMutableData dataWithData:[CGISTR(@""
                                                                 "<!DOCTYPE html>\n"
                                                                 "<html>\n"
                                                                 "<head>\n"
-                                                                "<title>HTTP 500: %@</title>\n"
+                                                                "<title>HTTP %lu: %@</title>\n"
                                                                 "</head>\n"
                                                                 "<body>\n"
                                                                 "<h1>%@ %ld: %@</h1>\n"
@@ -102,6 +107,7 @@
                                                                 "</div>\n"
                                                                 "</body>\n"
                                                                 "</html>\n",
+                                                                statusCode,
                                                                 [error localizedDescription],
                                                                 [error domain],
                                                                 [error code],
@@ -115,9 +121,15 @@
 
 + (instancetype)responseWithData:(NSData *)data type:(NSString *)type
 {
+    return [self responseWithData:data type:type statusCode:200];
+}
+
++ (instancetype)responseWithData:(NSData *)data type:(NSString *)type statusCode:(NSUInteger)statusCode
+{
     CGIHTTPResponse *resp = [[self alloc] init];
     [resp.responseData setData:data];
     resp.responseHeaders[@"Content-Type"] = type;
+    resp.responseHeaders[@"Status"] = CGISTR(@"%ld", statusCode);
     return resp;
 }
 

@@ -45,7 +45,7 @@
                                                      error:&err];
     if (!data)
     {
-        return [CGIHTTPResponse responseWithError:err];
+        return [CGIHTTPResponse responseWithError:err statusCode:400];
     }
     else
     {

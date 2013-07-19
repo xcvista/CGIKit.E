@@ -24,5 +24,6 @@
 #import <CGIJSONObject/NSData+DCPersistance.h>
 #import <CGIJSONObject/NSDate+DCPersistance.h>
 #import <CGIJSONObject/NSURL+DCPersistance.h>
+#import <CGIJSONObject/NSDictionary+DCPersistance.h>
 
 #endif
