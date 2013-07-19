@@ -12,6 +12,7 @@
 
 - (id)initWithPersistanceObject:(id)persistance
 {
+    self = nil;
     return persistance;
 }
 

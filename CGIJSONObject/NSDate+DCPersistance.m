@@ -27,6 +27,7 @@
     }
     else
     {
+        self = nil;
         return persistance;
     }
 }

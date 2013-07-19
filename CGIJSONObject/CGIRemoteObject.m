@@ -50,6 +50,7 @@ id objc_retain(id);
     }
     else
     {
+        self = nil;
         return persistanceObject;
     }
 }

@@ -341,6 +341,7 @@ char *NewBase64Encode(
     }
     else
     {
+        self = nil;
         return persistance;
     }
 }

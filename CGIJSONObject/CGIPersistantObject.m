@@ -114,6 +114,7 @@
     }
     else // ([persistance isKindOfClass:[NSDictionary class]])
     {
+        self = nil;
         return persistance;
     }
 }

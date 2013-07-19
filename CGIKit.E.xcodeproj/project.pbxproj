@@ -20,6 +20,10 @@
 		1D303BC41798D774001882AB /* NSDictionary+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D303BC11798D774001882AB /* NSDictionary+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D303BC51798D774001882AB /* NSDictionary+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D303BC21798D774001882AB /* NSDictionary+DCPersistance.m */; };
 		1D303BC61798D774001882AB /* NSDictionary+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D303BC21798D774001882AB /* NSDictionary+DCPersistance.m */; };
+		1D303BD01799403E001882AB /* NSArray+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D303BCE1799403E001882AB /* NSArray+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D303BD11799403E001882AB /* NSArray+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D303BCE1799403E001882AB /* NSArray+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D303BD21799403E001882AB /* NSArray+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D303BCF1799403E001882AB /* NSArray+DCPersistance.m */; };
+		1D303BD31799403E001882AB /* NSArray+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D303BCF1799403E001882AB /* NSArray+DCPersistance.m */; };
 		1D72DAA4175923090020E96C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72DAA3175923090020E96C /* Cocoa.framework */; };
 		1D72DAAE175923090020E96C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D72DAAC175923090020E96C /* InfoPlist.strings */; };
 		1D72DAB91759259A0020E96C /* CGIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAB71759259A0020E96C /* CGIApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -108,6 +112,8 @@
 		1D303BC11798D774001882AB /* NSDictionary+DCPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DCPersistance.h"; sourceTree = "<group>"; };
 		1D303BC21798D774001882AB /* NSDictionary+DCPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DCPersistance.m"; sourceTree = "<group>"; };
 		1D303BCA1798EE17001882AB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		1D303BCE1799403E001882AB /* NSArray+DCPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DCPersistance.h"; sourceTree = "<group>"; };
+		1D303BCF1799403E001882AB /* NSArray+DCPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DCPersistance.m"; sourceTree = "<group>"; };
 		1D72DAA0175923090020E96C /* CGIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D72DAA3175923090020E96C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D72DAA6175923090020E96C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -408,6 +414,8 @@
 				1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */,
 				1D303BC11798D774001882AB /* NSDictionary+DCPersistance.h */,
 				1D303BC21798D774001882AB /* NSDictionary+DCPersistance.m */,
+				1D303BCE1799403E001882AB /* NSArray+DCPersistance.h */,
+				1D303BCF1799403E001882AB /* NSArray+DCPersistance.m */,
 				1DA56E8B177C1B7700EBE5DD /* Linux */,
 				1DA56E5D177C1B2B00EBE5DD /* Supporting Files */,
 			);
@@ -458,6 +466,7 @@
 				1D091F2B177D2331001BCCC6 /* CGIJSONObject.h in Headers */,
 				1D303BC41798D774001882AB /* NSDictionary+DCPersistance.h in Headers */,
 				1DAD9DAF1784FC9600B52C72 /* NSURL+DCPersistance.h in Headers */,
+				1D303BD11799403E001882AB /* NSArray+DCPersistance.h in Headers */,
 				1D091F2C177D2331001BCCC6 /* CGIPersistantObject.h in Headers */,
 				1D091F2D177D2331001BCCC6 /* CGIRemoteConnection.h in Headers */,
 				1D091F2E177D2331001BCCC6 /* CGIRemoteObject.h in Headers */,
@@ -496,6 +505,7 @@
 				1DAD9DAA1784FC9600B52C72 /* NSDate+DCPersistance.h in Headers */,
 				1D303BC31798D774001882AB /* NSDictionary+DCPersistance.h in Headers */,
 				1DA56E86177C1B6E00EBE5DD /* CGIPersistantObject.h in Headers */,
+				1D303BD01799403E001882AB /* NSArray+DCPersistance.h in Headers */,
 				1DA56E93177C1CCF00EBE5DD /* CGIRemoteObject.h in Headers */,
 				1DAD9DA61784FC9600B52C72 /* NSData+DCPersistance.h in Headers */,
 				1DA56E85177C1B6E00EBE5DD /* CGIJSONObject.h in Headers */,
@@ -738,6 +748,7 @@
 				1D303BC61798D774001882AB /* NSDictionary+DCPersistance.m in Sources */,
 				1D091F29177D231C001BCCC6 /* CGIRemoteConnection.m in Sources */,
 				1D091F2A177D231C001BCCC6 /* CGIRemoteObject.m in Sources */,
+				1D303BD31799403E001882AB /* NSArray+DCPersistance.m in Sources */,
 				1DAD9DA91784FC9600B52C72 /* NSData+DCPersistance.m in Sources */,
 				1DAD9DAD1784FC9600B52C72 /* NSDate+DCPersistance.m in Sources */,
 			);
@@ -785,6 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D303BD21799403E001882AB /* NSArray+DCPersistance.m in Sources */,
 				1DA56E87177C1B6E00EBE5DD /* CGIPersistantObject.m in Sources */,
 				1D303BC51798D774001882AB /* NSDictionary+DCPersistance.m in Sources */,
 				1DAD9DB01784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */,
