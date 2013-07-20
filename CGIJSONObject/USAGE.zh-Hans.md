@@ -1,5 +1,8 @@
 # CGIJSONObject 在客户端的使用方法
 
+> 如果内容不完整，请移步：
+> <https://github.com/xcvista/CGIKit.E/blob/master/CGIJSONObject/USAGE.zh-Hans.md>
+
 `CGIJSONObject` 是一个 Objective-C 对象交互与持久化库。通过充分利用运行时特性，
 实现了几乎不用额外代码的持久化对象设计方式，适用于开发速度要求高的场合。持久化对
 象可以进一步转换为 JSON 或 Apple 属性表格式，并加以保存或传输。
