@@ -109,6 +109,7 @@
 /* Begin PBXFileReference section */
 		1D091F03177D2284001BCCC6 /* CGIJSONObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D091F13177D2284001BCCC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		1D1F9349179A87FB009D5147 /* USAGE.zh-Hans.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = "USAGE.zh-Hans.md"; sourceTree = "<group>"; };
 		1D303BC11798D774001882AB /* NSDictionary+DCPersistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DCPersistance.h"; sourceTree = "<group>"; };
 		1D303BC21798D774001882AB /* NSDictionary+DCPersistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DCPersistance.m"; sourceTree = "<group>"; };
 		1D303BCA1798EE17001882AB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -397,6 +398,7 @@
 		1DA56E5C177C1B2B00EBE5DD /* CGIJSONObject */ = {
 			isa = PBXGroup;
 			children = (
+				1D1F9349179A87FB009D5147 /* USAGE.zh-Hans.md */,
 				1DA56E7F177C1B6E00EBE5DD /* CGIJSONObject.h */,
 				1DA56E80177C1B6E00EBE5DD /* CGIPersistantObject.h */,
 				1DA56E81177C1B6E00EBE5DD /* CGIPersistantObject.m */,

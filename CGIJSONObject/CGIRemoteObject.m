@@ -19,6 +19,9 @@
 id objc_retain(id);
 
 @implementation CGIRemoteObject
+{
+    CGIRemoteConnection *__weak _connection;
+}
 
 - (id)init
 {
