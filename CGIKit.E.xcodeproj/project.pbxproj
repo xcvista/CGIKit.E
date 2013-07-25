@@ -876,6 +876,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "CGIJSONObject/CGIJSONObject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = CGIJSONObject;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -913,6 +917,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "CGIJSONObject/CGIJSONObject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = CGIJSONObject;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
