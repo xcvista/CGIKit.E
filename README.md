@@ -30,7 +30,7 @@ WebUIKit is largely modeled after ASP.net, which is in turn mimics Java EE.
 
 ## Copyright and License
 
-Copyright &copy; 2011-2013 Maxthon T. Chan. All rights reserved.
+Copyright &copy; 2011-2013 Maxthon Chan, John Shi, et al. All rights reserved.
 
 You can freely use, reproduce, display, copy, modify, and distribute this
 software, as long as the following conditions are met:
