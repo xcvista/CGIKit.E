@@ -120,15 +120,6 @@ id objc_retain(id);
                                     withString:@""
                                        options:0
                                          range:NSMakeRange(0, [methodName length])];
-        if ([methodName hasPrefix:@"_"])
-        {
-            [methodName deleteCharactersInRange:NSMakeRange(0, 1)];
-        }
-        else
-        {
-            [methodName replaceCharactersInRange:NSMakeRange(0, 1)
-                                      withString:[[methodName substringToIndex:1] uppercaseString]];
-        }
         
         NSError *error = nil;
         NSData *uplinkData = [self JSONDataWithError:&error];
