@@ -39,4 +39,6 @@
 
 @property NSData *downlinkData;
 
+- (NSString*) stringForDownlinkData;
+
 @end
