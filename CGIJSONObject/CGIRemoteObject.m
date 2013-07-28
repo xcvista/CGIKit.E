@@ -23,6 +23,8 @@ id objc_retain(id);
     CGIRemoteConnection *__weak _connection;
 }
 
+@synthesize downlinkData;
+
 - (id)init
 {
     if (self = [super init])
@@ -121,6 +123,16 @@ id objc_retain(id);
                                        options:0
                                          range:NSMakeRange(0, [methodName length])];
         
+        if ([methodName hasPrefix:@"_"])
+        {
+            [methodName deleteCharactersInRange:NSMakeRange(0, 1)];
+        }
+        else
+        {
+            [methodName replaceCharactersInRange:NSMakeRange(0, 1)
+                                      withString:[[methodName substringToIndex:1] uppercaseString]];
+        }
+        
         NSError *error = nil;
         NSData *uplinkData = [self JSONDataWithError:&error];
         
@@ -133,7 +145,7 @@ id objc_retain(id);
         
         
         
-        NSData *downlinkData = [_connection dataWithData:uplinkData
+        downlinkData = [_connection dataWithData:uplinkData
                                               fromMethod:methodName
                                                    error:&error];
         
@@ -189,6 +201,10 @@ id objc_retain(id);
     
     if (value) objc_retain(value);
     [anInvocation setReturnValue:&value];
+}
+
+- (NSString*) stringForDownlinkData{
+    return [[NSString alloc] initWithData:downlinkData encoding:NSUTF8StringEncoding];
 }
 
 @end
