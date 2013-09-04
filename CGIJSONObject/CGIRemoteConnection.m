@@ -54,6 +54,7 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
             serverRoot = [NSURL URLWithString:root];
         }
         self.serverRoot = serverRoot;
+        self.onError = ^(NSError* err, NSURLRequest* req){};
     }
     return self;
 }
@@ -77,9 +78,20 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
               fromMethod:(NSString *)method
                    error:(NSError *__autoreleasing *)error
 {
-    
-    NSMutableURLRequest *request = [self URLRequestForMethod:method];
-    
+    __block NSMutableURLRequest *request = [self URLRequestForMethod:method];
+    __block bool done = NO;
+    //if (self.timeoutSeconds){
+    //    double delayInSeconds = [self.timeoutSeconds doubleValue];
+    //    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    //    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+    //        if (!done) {
+    //            [request ]
+    //        }
+    //    });
+   //}
+    if (self.timeoutSeconds) {
+        request.timeoutInterval = [self.timeoutSeconds doubleValue];
+    }
     if ([data length])
     {
         [request setHTTPMethod:@"POST"];
@@ -116,6 +128,7 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
     if (![responseData length])
     {
         CGIAssignPointer(error, err);
+        self.onError(err, request);
         return nil;
     }
     
@@ -130,9 +143,10 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
                                   code:[response statusCode]
                               userInfo:userInfo];
         CGIAssignPointer(error, err);
+        self.onError(err, request);
         return nil;
     }
-    
+    done = YES;
     return responseData;
 }
 
@@ -154,10 +168,14 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
                               @(GSCygwinOperatingSystem):       @"Windows/Cygwin"
 #endif
                               };
-    return CGISTR(@"CGIJSONRemoteObject/4.1; CGIKit/2.0; %@; %@",
-                  OSNames[@([processInfo operatingSystem])],
-                  [processInfo operatingSystemVersionString]
-                  );
+    if (self.customUserAgent) {
+        return self.customUserAgent;
+    } else {
+        CGISTR(@"CGIJSONRemoteObject/4.1; CGIKit/2.0; %@; %@",
+               OSNames[@([processInfo operatingSystem])],
+               [processInfo operatingSystemVersionString]
+               );
+    }
 }
 
 
