@@ -78,17 +78,7 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
               fromMethod:(NSString *)method
                    error:(NSError *__autoreleasing *)error
 {
-    __block NSMutableURLRequest *request = [self URLRequestForMethod:method];
-    __block bool done = NO;
-    //if (self.timeoutSeconds){
-    //    double delayInSeconds = [self.timeoutSeconds doubleValue];
-    //    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    //    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-    //        if (!done) {
-    //            [request ]
-    //        }
-    //    });
-   //}
+    NSMutableURLRequest *request = [self URLRequestForMethod:method];
     if (self.timeoutSeconds) {
         request.timeoutInterval = [self.timeoutSeconds doubleValue];
     }
@@ -146,7 +136,6 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
         self.onError(err, request);
         return nil;
     }
-    done = YES;
     return responseData;
 }
 
