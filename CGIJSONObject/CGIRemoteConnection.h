@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^onError)(NSError*, NSURLRequest*);
+
 /**
  HTTP 错误域。
  */
@@ -30,6 +32,11 @@ extern NSString *const CGIRemoteConnectionServerRootKey;
  @see       -initWithServerRoot:
  */
 @property NSString *serverRoot;
+
+@property NSString *customUserAgent;
+@property NSNumber *timeoutSeconds;
+
+@property (nonatomic, strong) onError onError;
 
 /**
  获得默认远程连接控制对象。
@@ -81,5 +88,6 @@ extern NSString *const CGIRemoteConnectionServerRootKey;
  @return    URL 请求对象。
  */
 - (NSMutableURLRequest *)URLRequestForMethod:(NSString *)method;
+
 
 @end

@@ -37,4 +37,8 @@
 
 - (Class)classForMethod:(SEL)method;
 
+@property NSData *downlinkData;
+
+- (NSString*) stringForDownlinkData;
+
 @end
