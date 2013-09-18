@@ -87,8 +87,8 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
         [request setHTTPMethod:@"POST"];
         [request setHTTPBody:data];
         
-        [request setValue:@"application/json;charset=utf-8"
-       forHTTPHeaderField:@"Content-Type"];
+        [request setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:@"gzip, deflate" forHTTPHeaderField:@"Accept-Encoding"];
     }
     
     NSError *err = nil;
@@ -160,7 +160,7 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
     if (self.customUserAgent) {
         return self.customUserAgent;
     } else {
-        CGISTR(@"CGIJSONRemoteObject/4.1; CGIKit/2.0; %@; %@",
+        return CGISTR(@"CGIJSONRemoteObject/4.1; CGIKit/2.0; %@; %@",
                OSNames[@([processInfo operatingSystem])],
                [processInfo operatingSystemVersionString]
                );

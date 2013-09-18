@@ -16,13 +16,9 @@
 		1D091F2D177D2331001BCCC6 /* CGIRemoteConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E8D177C1CCF00EBE5DD /* CGIRemoteConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D091F2E177D2331001BCCC6 /* CGIRemoteObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E8F177C1CCF00EBE5DD /* CGIRemoteObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D091F2F177D2339001BCCC6 /* CGICommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D72DAB6175923480020E96C /* CGICommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D303BC31798D774001882AB /* NSDictionary+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D303BC11798D774001882AB /* NSDictionary+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D303BC41798D774001882AB /* NSDictionary+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D303BC11798D774001882AB /* NSDictionary+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D303BC51798D774001882AB /* NSDictionary+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D303BC21798D774001882AB /* NSDictionary+DCPersistance.m */; };
 		1D303BC61798D774001882AB /* NSDictionary+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D303BC21798D774001882AB /* NSDictionary+DCPersistance.m */; };
-		1D303BD01799403E001882AB /* NSArray+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D303BCE1799403E001882AB /* NSArray+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D303BD11799403E001882AB /* NSArray+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D303BCE1799403E001882AB /* NSArray+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D303BD21799403E001882AB /* NSArray+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D303BCF1799403E001882AB /* NSArray+DCPersistance.m */; };
 		1D303BD31799403E001882AB /* NSArray+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D303BCF1799403E001882AB /* NSArray+DCPersistance.m */; };
 		1D72DAC9175942BA0020E96C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72DAC8175942BA0020E96C /* Foundation.framework */; };
 		1D72DACC175942BB0020E96C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DACB175942BB0020E96C /* main.c */; };
@@ -32,32 +28,12 @@
 		1D72DAE8175951020020E96C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAE7175951020020E96C /* main.c */; };
 		1D72DAEC175951020020E96C /* CGISwagList.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D72DAEB175951020020E96C /* CGISwagList.1 */; };
 		1D72DAF3175951550020E96C /* CGISwagDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D72DAF2175951550020E96C /* CGISwagDelegate.m */; };
-		1DA56E5B177C1B2B00EBE5DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D72DAA3175923090020E96C /* Cocoa.framework */; };
-		1DA56E61177C1B2B00EBE5DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DA56E5F177C1B2B00EBE5DD /* InfoPlist.strings */; };
-		1DA56E85177C1B6E00EBE5DD /* CGIJSONObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E7F177C1B6E00EBE5DD /* CGIJSONObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DA56E86177C1B6E00EBE5DD /* CGIPersistantObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E80177C1B6E00EBE5DD /* CGIPersistantObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DA56E87177C1B6E00EBE5DD /* CGIPersistantObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA56E81177C1B6E00EBE5DD /* CGIPersistantObject.m */; };
-		1DA56E88177C1B6E00EBE5DD /* GNUmakefile in Resources */ = {isa = PBXBuildFile; fileRef = 1DA56E82177C1B6E00EBE5DD /* GNUmakefile */; };
-		1DA56E89177C1B6E00EBE5DD /* GNUmakefile.postamble in Resources */ = {isa = PBXBuildFile; fileRef = 1DA56E83177C1B6E00EBE5DD /* GNUmakefile.postamble */; };
-		1DA56E8A177C1B6E00EBE5DD /* GNUmakefile.preamble in Resources */ = {isa = PBXBuildFile; fileRef = 1DA56E84177C1B6E00EBE5DD /* GNUmakefile.preamble */; };
-		1DA56E91177C1CCF00EBE5DD /* CGIRemoteConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E8D177C1CCF00EBE5DD /* CGIRemoteConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DA56E92177C1CCF00EBE5DD /* CGIRemoteConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA56E8E177C1CCF00EBE5DD /* CGIRemoteConnection.m */; };
-		1DA56E93177C1CCF00EBE5DD /* CGIRemoteObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA56E8F177C1CCF00EBE5DD /* CGIRemoteObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DA56E94177C1CCF00EBE5DD /* CGIRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA56E90177C1CCF00EBE5DD /* CGIRemoteObject.m */; };
-		1DAD9DA61784FC9600B52C72 /* NSData+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA01784FC9600B52C72 /* NSData+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DAD9DA71784FC9600B52C72 /* NSData+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA01784FC9600B52C72 /* NSData+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DAD9DA81784FC9600B52C72 /* NSData+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA11784FC9600B52C72 /* NSData+DCPersistance.m */; };
 		1DAD9DA91784FC9600B52C72 /* NSData+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA11784FC9600B52C72 /* NSData+DCPersistance.m */; };
-		1DAD9DAA1784FC9600B52C72 /* NSDate+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA21784FC9600B52C72 /* NSDate+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DAD9DAB1784FC9600B52C72 /* NSDate+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA21784FC9600B52C72 /* NSDate+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DAD9DAC1784FC9600B52C72 /* NSDate+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA31784FC9600B52C72 /* NSDate+DCPersistance.m */; };
 		1DAD9DAD1784FC9600B52C72 /* NSDate+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA31784FC9600B52C72 /* NSDate+DCPersistance.m */; };
-		1DAD9DAE1784FC9600B52C72 /* NSURL+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA41784FC9600B52C72 /* NSURL+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DAD9DAF1784FC9600B52C72 /* NSURL+DCPersistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DAD9DA41784FC9600B52C72 /* NSURL+DCPersistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DAD9DB01784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */; };
 		1DAD9DB11784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAD9DA51784FC9600B52C72 /* NSURL+DCPersistance.m */; };
-		1DE700E81796E5A70011EDBF /* CGIServerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE700E61796E5A70011EDBF /* CGIServerObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DE700E91796E5A70011EDBF /* CGIServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE700E71796E5A70011EDBF /* CGIServerObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -126,7 +102,6 @@
 		1D81FA0D178BA30A006AB2D0 /* WebUIKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebUIKit-Info.plist"; sourceTree = "<group>"; };
 		1D81FA0F178BA30A006AB2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D81FA12178BA30A006AB2D0 /* WebUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebUIKit.h; sourceTree = "<group>"; };
-		1DA56E5A177C1B2B00EBE5DD /* CGIJSONObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA56E5E177C1B2B00EBE5DD /* CGIJSONObject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGIJSONObject-Info.plist"; sourceTree = "<group>"; };
 		1DA56E60177C1B2B00EBE5DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1DA56E7F177C1B6E00EBE5DD /* CGIJSONObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIJSONObject.h; sourceTree = "<group>"; };
@@ -186,14 +161,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DA56E56177C1B2B00EBE5DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1DA56E5B177C1B2B00EBE5DD /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -217,7 +184,6 @@
 			children = (
 				1D72DAC7175942BA0020E96C /* CGITest.cgi */,
 				1D72DAE4175951020020E96C /* CGISwagList.cgi */,
-				1DA56E5A177C1B2B00EBE5DD /* CGIJSONObject.framework */,
 				1D091F03177D2284001BCCC6 /* CGIJSONObject.framework */,
 			);
 			name = Products;
@@ -426,23 +392,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DA56E57177C1B2B00EBE5DD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1DE700E81796E5A70011EDBF /* CGIServerObject.h in Headers */,
-				1DAD9DAA1784FC9600B52C72 /* NSDate+DCPersistance.h in Headers */,
-				1D303BC31798D774001882AB /* NSDictionary+DCPersistance.h in Headers */,
-				1DA56E86177C1B6E00EBE5DD /* CGIPersistantObject.h in Headers */,
-				1D303BD01799403E001882AB /* NSArray+DCPersistance.h in Headers */,
-				1DA56E93177C1CCF00EBE5DD /* CGIRemoteObject.h in Headers */,
-				1DAD9DA61784FC9600B52C72 /* NSData+DCPersistance.h in Headers */,
-				1DA56E85177C1B6E00EBE5DD /* CGIJSONObject.h in Headers */,
-				1DAD9DAE1784FC9600B52C72 /* NSURL+DCPersistance.h in Headers */,
-				1DA56E91177C1CCF00EBE5DD /* CGIRemoteConnection.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -501,24 +450,6 @@
 			productReference = 1D72DAE4175951020020E96C /* CGISwagList.cgi */;
 			productType = "com.apple.product-type.tool";
 		};
-		1DA56E59177C1B2B00EBE5DD /* CGIJSONObject */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DA56E7D177C1B2B00EBE5DD /* Build configuration list for PBXNativeTarget "CGIJSONObject" */;
-			buildPhases = (
-				1DA56E55177C1B2B00EBE5DD /* Sources */,
-				1DA56E56177C1B2B00EBE5DD /* Frameworks */,
-				1DA56E57177C1B2B00EBE5DD /* Headers */,
-				1DA56E58177C1B2B00EBE5DD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CGIJSONObject;
-			productName = CGIJSONObject;
-			productReference = 1DA56E5A177C1B2B00EBE5DD /* CGIJSONObject.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -541,7 +472,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1DA56E59177C1B2B00EBE5DD /* CGIJSONObject */,
 				1D091F02177D2284001BCCC6 /* MobileJSONObject */,
 				1D72DAC6175942BA0020E96C /* CGITest */,
 				1D72DAE3175951020020E96C /* CGISwagList */,
@@ -554,17 +484,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DA56E58177C1B2B00EBE5DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1DA56E89177C1B6E00EBE5DD /* GNUmakefile.postamble in Resources */,
-				1DA56E61177C1B2B00EBE5DD /* InfoPlist.strings in Resources */,
-				1DA56E8A177C1B6E00EBE5DD /* GNUmakefile.preamble in Resources */,
-				1DA56E88177C1B6E00EBE5DD /* GNUmakefile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,22 +565,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DA56E55177C1B2B00EBE5DD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D303BD21799403E001882AB /* NSArray+DCPersistance.m in Sources */,
-				1DA56E87177C1B6E00EBE5DD /* CGIPersistantObject.m in Sources */,
-				1D303BC51798D774001882AB /* NSDictionary+DCPersistance.m in Sources */,
-				1DAD9DB01784FC9600B52C72 /* NSURL+DCPersistance.m in Sources */,
-				1DE700E91796E5A70011EDBF /* CGIServerObject.m in Sources */,
-				1DA56E92177C1CCF00EBE5DD /* CGIRemoteConnection.m in Sources */,
-				1DA56E94177C1CCF00EBE5DD /* CGIRemoteObject.m in Sources */,
-				1DAD9DA81784FC9600B52C72 /* NSData+DCPersistance.m in Sources */,
-				1DAD9DAC1784FC9600B52C72 /* NSDate+DCPersistance.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -696,7 +599,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -743,7 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -912,89 +815,6 @@
 			};
 			name = Release;
 		};
-		1DA56E79177C1B2B00EBE5DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CGIJSONObject/CGIJSONObject-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "";
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		1DA56E7A177C1B2B00EBE5DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "CGIJSONObject/CGIJSONObject-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "";
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1030,15 +850,6 @@
 			buildConfigurations = (
 				1D72DAEE175951020020E96C /* Debug */,
 				1D72DAEF175951020020E96C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1DA56E7D177C1B2B00EBE5DD /* Build configuration list for PBXNativeTarget "CGIJSONObject" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DA56E79177C1B2B00EBE5DD /* Debug */,
-				1DA56E7A177C1B2B00EBE5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
