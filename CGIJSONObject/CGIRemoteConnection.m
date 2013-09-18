@@ -54,6 +54,7 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
             serverRoot = [NSURL URLWithString:root];
         }
         self.serverRoot = serverRoot;
+        self.onError = ^(NSError* err, NSURLRequest* req){};
     }
     return self;
 }
@@ -77,16 +78,17 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
               fromMethod:(NSString *)method
                    error:(NSError *__autoreleasing *)error
 {
-    
     NSMutableURLRequest *request = [self URLRequestForMethod:method];
-    
+    if (self.timeoutSeconds) {
+        request.timeoutInterval = [self.timeoutSeconds doubleValue];
+    }
     if ([data length])
     {
         [request setHTTPMethod:@"POST"];
         [request setHTTPBody:data];
         
-        [request setValue:@"application/json;charset=utf-8"
-       forHTTPHeaderField:@"Content-Type"];
+        [request setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:@"gzip, deflate" forHTTPHeaderField:@"Accept-Encoding"];
     }
     
     NSError *err = nil;
@@ -116,6 +118,7 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
     if (![responseData length])
     {
         CGIAssignPointer(error, err);
+        self.onError(err, request);
         return nil;
     }
     
@@ -130,9 +133,9 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
                                   code:[response statusCode]
                               userInfo:userInfo];
         CGIAssignPointer(error, err);
+        self.onError(err, request);
         return nil;
     }
-    
     return responseData;
 }
 
@@ -154,10 +157,14 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
                               @(GSCygwinOperatingSystem):       @"Windows/Cygwin"
 #endif
                               };
-    return CGISTR(@"CGIJSONRemoteObject/4.1; CGIKit/2.0; %@; %@",
-                  OSNames[@([processInfo operatingSystem])],
-                  [processInfo operatingSystemVersionString]
-                  );
+    if (self.customUserAgent) {
+        return self.customUserAgent;
+    } else {
+        return CGISTR(@"CGIJSONRemoteObject/4.1; CGIKit/2.0; %@; %@",
+               OSNames[@([processInfo operatingSystem])],
+               [processInfo operatingSystemVersionString]
+               );
+    }
 }
 
 
